@@ -1,0 +1,38 @@
+* {
+    font-family: Arial, sans-serif;
+  }
+  html{
+    height: 100%;
+    width: 100%;
+  }
+  
+  body {
+    background-image: url(Imagenes/fondo.png);
+  }
+  
+  h1 {
+    margin: 0;
+    color: #FFE600;
+    font-size: 120px;
+    text-align: center;
+    -webkit-text-stroke: 4px #EC9718;
+    margin-top: 20px;
+  }
+  
+  #botones_inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  #botones_inicio>button {
+    background: #FFE600;
+    color: #EC9718;
+    font-size: 60px;
+    border: #EC9718 solid 5px;
+    border-radius: 30px;
+    width: 620px;
+    height: 110px;
+    margin-top: 40px;
+  }

@@ -1,0 +1,39 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  
+  html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  #botones_abajo>button {
+    background: #FFE600;
+    color: #EC9718;
+    font-size: 60px;
+    border: #EC9718 solid 5px;
+    border-radius: 30px;
+    width: 425px;
+    height: 75px;
+    margin-top: 30px;
+  
+  }
+  
+  #botones_abajo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  
+  }
+  #botones_abajo {
+    justify-content: space-evenly;
+  }
+  
+  #parte_abajo {
+    background-image: url(Imagenes/fondo.png);
+    padding-bottom: 30px;
+    position: absolute;
+    bottom: 0%;
+  }

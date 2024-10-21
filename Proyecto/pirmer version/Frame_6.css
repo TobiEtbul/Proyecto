@@ -1,0 +1,62 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  html {
+    height: 100%;
+    width: 100%;
+  }
+
+  h1 {
+    margin: 0;
+    color: #FFE600;
+    font-size: 85px;
+    text-align: center;
+    -webkit-text-stroke: 4px #EC9718;
+    flex-direction: column;
+    margin-top:20px;
+  }
+  #mapa {
+    display: flex;
+    align-items: center;
+    justify-content: center
+  }
+  
+  #mapa>div {
+  
+    width: 110px;
+    height: 100px;
+    position: relative;
+    border: solid   #EC9718 5px;
+    background: #433C36;
+    align-items: center;
+    margin-top: 20px;
+  }
+  #parte_abajo {
+    background-image: url(Imagenes/fondo.png);
+    padding-bottom: 30px;
+    position: absolute;
+    bottom: 0%;
+    align-items: center;
+    width: 100%;
+  }
+  #mapa>div:nth-child(5) {
+    background: #FFE600;
+  }
+  #mapa>div:nth-child(10) {
+    background: #FF0707;
+  } 
+
+  .calavera {
+  justify-content: center;
+  display:flex;
+
+    img{
+      margin-top: 5%;
+      height: 90%;
+      width: 70%;
+    }
+  }

@@ -1,0 +1,460 @@
+* {
+    font-family: "Metal Mania", system-ui; 
+}
+
+body {
+    background-image: url("../Imagenes/fondo.png");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    overflow:visible;
+}
+
+.parte_arriba2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cristales img {
+    height: 7em;
+    width: auto;
+    align-self: center;
+}
+
+.cristales {
+    display: flex;
+}
+h2 {
+    color: #EE20F9;
+    -webkit-text-stroke: 1px #C818EC;
+    font-size: 7em;
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+    color: #ffe600;
+    font-size: 120px;
+    text-align: center;
+    -webkit-text-stroke: 1px #ec9718;
+    justify-self: center;
+}
+
+h3 {
+    font-size: 50px;
+    padding: 0;
+    margin: 0;
+}
+
+.contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 7em;
+}
+
+.izquierda {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.izquierda > div {
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 10px 0;
+}
+
+.vida {
+    display: flex;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.texto_vida {
+    color: #ffe600;
+    -webkit-text-stroke: 1px #ec9718;
+    height: 100%;
+    width: 100%;
+    margin-right: 1em;
+}
+
+.texto_defensa {
+    color: #ffe600;
+    -webkit-text-stroke: 1px #ec9718;
+    height: 100%;
+    width: 100%;
+    margin-right: 1em;
+}
+
+.texto_daño {
+    color: #ffe600;
+    -webkit-text-stroke: 1px #ec9718;
+    height: 100%;
+    width: 100%;
+    margin-right: 1em;
+}
+
+.texto_area {
+    color: #ffe600;
+    -webkit-text-stroke: 1px #ec9718;
+    height: 100%;
+    width: 100%;
+    margin-right: 1em;
+}
+.texto_stamina {
+    color: #ffe600;
+    -webkit-text-stroke: 1px #ec9718;
+    height: 100%;
+    width: 100%;
+    margin-right: 1em;
+}
+
+.barra_vida {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+.barra_vida > div {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    border: solid #ec9718 5px;
+    background: #433c36;
+}
+
+
+.defensa {
+    display: flex;
+}
+
+.barra_defensa {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.barra_defensa > div {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    border: solid #ec9718 5px;
+    background: #433c36;
+}
+
+
+.daño {
+    display: flex;
+}
+
+.barra_daño {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.barra_daño > div {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    border: solid #ec9718 5px;
+    background: #433c36;
+}
+
+.area {
+    display: flex;
+}
+
+.barra_area {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.barra_area > div {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    border: solid #ec9718 5px;
+    background: #433c36;
+}
+
+.stamina {
+    display: flex;
+}
+
+.barra_stamina {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.barra_stamina > div {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    border: solid #ec9718 5px;
+    background: #433c36;
+}
+
+.suma_vida {
+    font-size: 20px;
+    border: solid #ec9718 2px;
+    background: #ec9718;
+    color: #ffe600;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.suma_defensa {
+    font-size: 20px;
+    border: solid #ec9718 2px;
+    background: hsl(36, 85%, 51%);
+    color: #ffe600;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.suma_daño {
+    font-size: 20px;
+    border: solid #ec9718 2px;
+    background: #ec9718;
+    color: #ffe600;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.suma_area {
+    font-size: 20px;
+    border: solid #ec9718 2px;
+    background: #ec9718;
+    color: #ffe600;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.suma_stamina {
+    font-size: 20px;
+    border: solid #ec9718 2px;
+    background: #ec9718;
+    color: #ffe600;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #0bff06;
+}
+
+
+.colorv1 {
+    visibility:visible;
+    background-color: #0bff06;
+    height: 100%;
+    width: 100%;
+}
+
+
+.colorv2 {
+    visibility:visible;
+    background-color: #0bff06;
+    height: 100%;
+    width: 100%;
+}
+
+
+.colorv3 {
+    visibility:visible;
+    background-color: #0bff06;
+    height: 100%;
+    width: 100%;
+}
+
+
+.colorv4 {
+    visibility:visible;
+    background-color: #0bff06;
+    height: 100%;
+    width: 100%;
+}
+
+
+.colorv5 {
+    visibility:visible;
+    background-color: #0bff06;
+    height: 100%;
+    width: 100%;
+}
+
+
+.colorde1 {
+    visibility:visible;
+    background-color: #0bff06;
+    height: 100%;
+    width: 100%;
+}
+
+
+.colorde2 {
+    visibility:visible;
+    background-color: #0bff06;
+    height: 100%;
+    width: 100%;
+}
+
+
+.colorde3 {
+    visibility:visible;
+    background-color: #0bff06;
+    height: 100%;
+    width: 100%;
+}
+
+
+.colorde4 {
+    visibility:visible;
+    background-color: #0bff06;
+    height: 100%;
+    width: 100%;
+}
+
+
+.colorde5 {
+    visibility:visible;
+    background-color: #0bff06;
+    height: 100%;
+    width: 100%;
+}
+
+
+.colord1 {
+    visibility:visible;
+    background-color: #0bff06;
+    height: 100%;
+    width: 100%;
+}
+
+
+.colord2 {
+    visibility:visible;
+    background-color: #0bff06;
+    height: 100%;
+    width: 100%;
+}
+
+
+.colord3 {
+    visibility:visible;
+    background-color: #0bff06;
+    height: 100%;
+    width: 100%;
+}
+
+
+.colord4 {
+    visibility:visible;
+    background-color: #0bff06;
+    height: 100%;
+    width: 100%;
+}
+
+
+.colord5 {
+    visibility:visible;
+    background-color: #0bff06;
+    height: 100%;
+    width: 100%;
+}
+
+
+.colora1 {
+    visibility:visible;
+    background-color: #0bff06;
+    height: 100%;
+    width: 100%;
+}
+
+
+.colora2 {
+    visibility:visible;
+    background-color: #0bff06;
+    height: 100%;
+    width: 100%;
+}
+
+
+.colora3 {
+    visibility:visible;
+    background-color: #0bff06;
+    height: 100%;
+    width: 100%;
+}
+
+
+.colora4 {
+    visibility:visible;
+    background-color: #0bff06;
+    height: 100%;
+    width: 100%;
+}
+
+
+.colora5 {
+    visibility:visible;
+    background-color: #0bff06;
+    height: 100%;
+    width: 100%;
+}
+
+
+.colors1 {
+    visibility:visible;
+    background-color: #0bff06;
+    height: 100%;
+    width: 100%;
+}
+
+
+.colors2 {
+    visibility:visible;
+    background-color: #0bff06;
+    height: 100%;
+    width: 100%;
+}
+
+
+.colors3 {
+    visibility:visible;
+    background-color: #0bff06;
+    height: 100%;
+    width: 100%;
+}
+
+
+.colors4 {
+    visibility:visible;
+    background-color: #0bff06;
+    height: 100%;
+    width: 100%;
+}
+
+
+.colors5 {
+    visibility:visible;
+    background-color: #0bff06;
+    height: 100%;
+    width: 100%;
+}
+
