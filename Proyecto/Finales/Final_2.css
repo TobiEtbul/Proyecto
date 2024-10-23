@@ -458,3 +458,8 @@ h3 {
     width: 100%;
 }
 
+.square.active {
+    background-color: #0bff06; 
+    z-index: 999;
+}
+
