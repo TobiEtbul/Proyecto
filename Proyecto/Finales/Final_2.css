@@ -65,7 +65,7 @@ h3 {
     height: auto;
     align-items: center;
     justify-content: space-evenly;
-    margin: 0.7em 0;
+    margin: 10px 0;
 }
 
 .vida {
@@ -124,8 +124,8 @@ h3 {
 }
 
 .barra_vida > div {
-    width: 4em;
-    height: 4em;
+    width: 60px;
+    height: 60px;
     position: relative;
     border: solid #ec9718 5px;
     background: #433c36;
@@ -144,8 +144,8 @@ h3 {
 }
 
 .barra_defensa > div {
-    width: 4em;
-    height: 4em;
+    width: 60px;
+    height: 60px;
     position: relative;
     border: solid #ec9718 5px;
     background: #433c36;
@@ -164,8 +164,8 @@ h3 {
 }
 
 .barra_daño > div {
-    width: 4em;
-    height: 4em;
+    width: 60px;
+    height: 60px;
     position: relative;
     border: solid #ec9718 5px;
     background: #433c36;
@@ -183,8 +183,8 @@ h3 {
 }
 
 .barra_area > div {
-    width: 4em;
-    height: 4em;
+    width: 60px;
+    height: 60px;
     position: relative;
     border: solid #ec9718 5px;
     background: #433c36;
@@ -202,8 +202,8 @@ h3 {
 }
 
 .barra_stamina > div {
-    width: 4em;
-    height: 4em;
+    width: 60px;
+    height: 60px;
     position: relative;
     border: solid #ec9718 5px;
     background: #433c36;

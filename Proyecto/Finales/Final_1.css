@@ -17,10 +17,10 @@ body {
 }
 
 img {
-  margin-top: 3em;
-  width: 30em;
+  margin-top: 5px;
+  width: 500px;
   height: auto;
-  margin-left: 2em;
+  margin-left: 45px;
   margin-bottom: 2em;
 }
 
@@ -38,6 +38,7 @@ img {
   font-size: 55px;
   border: #ec9718 solid 5px;
   border-radius: 30px;
-  width: 10em;
+  width: 500px;
+  height: 75px;
   cursor: pointer;
 }
