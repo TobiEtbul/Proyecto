@@ -458,8 +458,28 @@ h3 {
     width: 100%;
 }
 
-.square.active {
+.squareV.active {
     background-color: #0bff06; 
     z-index: 999;
 }
 
+.squareDe.active {
+    background-color: #0bff06; 
+    z-index: 999;
+}
+
+
+.squareDa.active {
+    background-color: #0bff06; 
+    z-index: 999;
+}
+
+.squareA.active {
+    background-color: #0bff06; 
+    z-index: 999;
+}
+
+.squareS.active {
+    background-color: #0bff06; 
+    z-index: 999;
+}
