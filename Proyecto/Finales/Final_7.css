@@ -10,6 +10,20 @@ html {
     width: 100%;
 }
 
+.parte_arriba7 {
+    height: 26em;
+    width: 100%;
+}
+
+.atras7 {
+    position: absolute;
+}
+
+.parte_arriba7 img {
+    height: 100%;
+    width: 100%;
+}
+
 h1 {
     margin: 0;
     color: #ffe600;
@@ -36,7 +50,7 @@ h1 {
 }
 .parte_abajo7 {
     background-image: url(../Imagenes/fondo.png);
-    padding-bottom: 30px;
+    padding-bottom: 1.9em;
     position: absolute;
     bottom: 0%;
     align-items: center;

@@ -1,0 +1,53 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Metal Mania", system-ui; 
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+.parte_arriba3 {
+    height: 28em;
+    width: 100%;
+}
+
+.atras3{
+    position: absolute;
+}
+
+.parte_arriba3 img {
+    height: 100%;
+    width: 100%;
+}
+
+.botones_abajo3 button {
+    background: #ffe600;
+    color: #ec9718;
+    font-size: 60px;
+    border: #ec9718 solid 5px;
+    border-radius: 30px;
+    width: 500px;
+    height: 75px;
+    margin-top: 70px;
+    cursor: pointer;
+}
+
+.botones_abajo3 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.botones_abajo3 {
+    justify-content: space-around;
+    }
+
+.parte_abajo3 {
+    background-image: url(../Imagenes/fondo.png);
+    padding-bottom: 30px;
+    position: absolute;
+    bottom: 0%;
+}
