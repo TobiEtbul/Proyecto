@@ -1,0 +1,46 @@
+* {
+    font-family: "Metal Mania", system-ui; 
+  }
+  html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  body {
+    background-image: url("../Imagenes/fondo.png");
+    position: relative;
+    overflow:hidden;
+  }
+
+
+h1 {
+    margin: 0;
+    color: #ffe600;
+    font-size: 120px;
+    text-align: center;
+    -webkit-text-stroke: 1px #ec9718;
+    justify-self: center;
+}
+h2 {
+    margin: 0;
+    color: #ffe600;
+    font-size: 65px;
+    text-align: center;
+    -webkit-text-stroke: 1px #ec9718;
+    justify-self: center;
+    margin-top: 0.2em;
+}
+
+.MineroL {
+    position: absolute;
+    left: -5%;
+    transform: translateY(-9%);
+}
+img{
+    position: absolute;
+}
+.MineroR {
+    position: absolute;
+    right: 0%   ;
+    transform: translateY(-100%);
+}
