@@ -3,6 +3,11 @@ let enemigosZ1 = JSON.parse(fs.readFileSync("./JSON/EnemigosZ1.json"));
 let enemigosZ2 = JSON.parse(fs.readFileSync("./JSON/EnemigosZ2.json"));
 let enemigosZ3 = JSON.parse(fs.readFileSync("./JSON/EnemigosZ3.json"));
 let bosses = JSON.parse(fs.readFileSync("./JSON/EnemigosBosses.json"));
+let habilidades_act = JSON.parse(fs.readFileSync("./JSON/Habilidades_act.json"));
+let habilidades_pas = JSON.parse(fs.readFileSync("./JSON/habilidades_pas.son"));
+
+let habilidades = habilidades_act + habilidades_pas ;
+
 let dataM = fs.readFileSync("./JSON/negro.json");
 
 var daño = dataM.ATK;
@@ -57,6 +62,18 @@ let cooldownCris = 6;
 function cambiarTurno() {
   if (turnoActual === "jugador") {
     turnoActual = "enemigos";
+    cooldownBomba();
+    cooldownChoripan();
+    cooldownCuchillo();
+    cooldownEmpalar();
+    cooldownLanzaCar();
+    cooldownLanzaCarLla();
+    cooldownMatienzo();
+    cooldownTaladro();
+    cooldownCrisMagico();
+   fuego1;
+   fuego2,
+   fuego3;
   } else turnoActual = "jugador";
 }
 console.log(`Turno actual: ${turnoActual}`);
@@ -84,130 +101,162 @@ function lentitudF() {
     lentitud = false;
   }
 }
-function fuegoF() {
+function fuegoE() {
   fuego = true;
   if ((fuego = true)) {
     HPM = HPM - 5;
   }
 }
+function fuego1() {
+let fueguito = 0
+  if (enemigos[0].fuego == true && fueguito < 3) {
+  fueguito++ ;
+  enemigos[0].HP = enemigos[0].HP - 10;
+} else if (enemigos[0].fuego == true && fueguito >= 3) {
+enemigos[0].fuego == false;
+}
+}
+function fuego2() {
+  let fueguito = 0
+    if (enemigos[1].fuego == true && fueguito < 3) {
+    fueguito++ ;
+    enemigos[1].HP = enemigos[1].HP - 10;
+  } else if (enemigos[1].fuego == true && fueguito >= 3) {
+  enemigos[1].fuego == false;
+  }
+}
+function fuego3() {
+    let fueguito = 0
+      if (enemigos[2].fuego == true && fueguito < 3) {
+      fueguito++ ;
+      enemigos[2].HP = enemigos[2].HP - 10;
+    } else if (enemigos[2].fuego == true && fueguito >= 3) {
+    enemigos[2].fuego == false;
+    }
+}
 function golpeJugador() {
-  if (enemigosHP[0] > 0) {
-    enemigo1.HP = enemigo1.HP - daño;
-    enemigo2.HP = enemigo2.HP - areaDMG;
-    enemigo3.HP = enemigo3.HP - areaDMG;
-  } else if (enemigosHP[1] > 0) {
-    enemigo2.HP = enemigo2.HP - daño;
-    enemigo3.HP = enemigo3.HP - areaDMG;
-  } else if (enemigosHP[2] > 0) {
-    enemigo3.HP = enemigo3.HP - daño;
+  if (enemigos[0].HP > 0) {
+    enemigos[0].HP = enemigos[0].HP - daño;
+    enemigos[1].HP = enemigos[1].HP - areaDMG;
+    enemigos[2].HP = enemigos[2].HP - areaDMG;
+  } else if (enemigos[1].HP > 0) {
+    enemigos[1].HP = enemigo[1].HP - daño;
+    enemigos[2].HP = enemigos[2].HP - areaDMG;
+  } else if (enemigos[2].HP > 0) {
+    enemigos[2].HP = enemigos[2].HP - daño;
   }
 }
 function emplalarI() {
   cooldownEMP = 0;
   if (estamina >= 15 && cooldownEMP <= 3) {
-    if (enemigosHP[0] > 0) {
-      enemigo1.HP = enemigo1.HP - (daño * 120) / 100;
-      enemigo2.HP = enemigo2.HP - (daño * 120) / 100;
-      enemigo3.HP = enemigo3.HP - (daño * 120) / 100;
-    } else if (enemigosHP[1] > 0) {
-      enemigo2.HP = enemigo2.HP - (daño * 120) / 100;
-      enemigo3.HP = enemigo3.HP - (daño * 120) / 100;
-    } else if (enemigosHP[2] > 0) {
-      enemigo3.HP = enemigo3.HP - (daño * 120) / 100;
+    if (enemigos[0].HP > 0) {
+      enemigos[0].HP = enemigos[0].HP - (daño * 120) / 100;
+      enemigos[1].HP = enemigos[1].HP - (daño * 120) / 100;
+      enemigos[2].HP = enemigos[2].HP - (daño * 120) / 100;
+    } else if (enemigos[1].HP > 0) {
+      enemigos[1].HP = enemigos[1].HP - (daño * 120) / 100;
+      enemigos[2].HP = enemigos[2].HP - (daño * 120) / 100;
+    } else if (enemigos[2].HP > 0) {
+      enemigos[2].HP = enemigos[2].HP - (daño * 120) / 100;
     }
   } else alert("¡estamina insuficiente!");
 }
 function emplalarII() {
   cooldownEMP = 0;
-  if (estamina >= 20 && cooldownEMP <= 3) {
-    if (enemigosHP[0] > 0) {
-      enemigo1.HP = enemigo1.HP - (daño * 150) / 100;
-      enemigo2.HP = enemigo2.HP - (daño * 150) / 100;
-      enemigo3.HP = enemigo3.HP - (daño * 150) / 100;
-    } else if (enemigosHP[1] > 0) {
-      enemigo2.HP = enemigo2.HP - (daño * 150) / 100;
-      enemigo3.HP = enemigo3.HP - (daño * 150) / 100;
-    } else if (enemigosHP[2] > 0) {
-      enemigo3.HP = enemigo3.HP - (daño * 150) / 100;
-    }
-  } else alert("¡estamina insuficiente!");
+    if (estamina >= 15 && cooldownEMP <= 3) {
+      if (enemigos[0].HP > 0) {
+        enemigos[0].HP = enemigos[0].HP - (daño * 150) / 100;
+        enemigos[1].HP = enemigos[1].HP - (daño * 150) / 100;
+        enemigos[2].HP = enemigos[2].HP - (daño * 150) / 100;
+      } else if (enemigos[1].HP > 0) {
+        enemigos[1].HP = enemigos[1].HP - (daño * 150) / 100;
+        enemigos[2].HP = enemigos[2].HP - (daño * 150) / 100;
+      } else if (enemigos[2].HP > 0) {
+        enemigos[2].HP = enemigos[2].HP - (daño * 150) / 100;
+      }
+    } else alert("¡estamina insuficiente!");
 }
 function emplalarIII() {
   cooldownEMP = 0;
-  if (estamina >= 25 && cooldownEMP <= 3) {
-    if (enemigosHP[0] > 0) {
-      enemigo1.HP = enemigo1.HP - (daño * 200) / 100;
-      enemigo2.HP = enemigo2.HP - (daño * 200) / 100;
-      enemigo3.HP = enemigo3.HP - (daño * 200) / 100;
-    } else if (enemigosHP[1] > 0) {
-      enemigo2.HP = enemigo2.HP - (daño * 200) / 100;
-      enemigo3.HP = enemigo3.HP - (daño * 200) / 100;
-    } else if (enemigosHP[2] > 0) {
-      enemigo3.HP = enemigo3.HP - (daño * 200) / 100;
+  if (estamina >= 15 && cooldownEMP <= 3) {
+    if (enemigos[0].HP > 0) {
+      enemigos[0].HP = enemigos[0].HP - (daño * 200) / 100;
+      enemigos[1].HP = enemigos[1].HP - (daño * 200) / 100;
+      enemigos[2].HP = enemigos[2].HP - (daño * 200) / 100;
+    } else if (enemigos[1].HP > 0) {
+      enemigos[1].HP = enemigos[1].HP - (daño * 200) / 100;
+      enemigos[2].HP = enemigos[2].HP - (daño * 200) / 100;
+    } else if (enemigos[2].HP > 0) {
+      enemigos[2].HP = enemigos[2].HP - (daño * 200) / 100;
     }
   } else alert("¡estamina insuficiente!");
 }
 function lanza_carbonI() {
   cooldownLANZ = 0;
   if (estamina >= 5 && cooldownLANZ <= 1) {
-    if (enemigo1.HP > 0) {
-      enemigo1.HP = enemigo1.HP - (daño * 100) / 100;
-      enemigo2.HP = enemigo2.HP - daño * 0;
-      enemigo3.HP = enemigo3.HP - daño * 0;
-    } else if (enemigo2.HP > 0) {
-      enemigo2.HP = enemigo2.HP - (daño * 100) / 100;
-      enemigo3.HP = enemigo3.HP - daño * 0;
-    } else if (enemigo3.HP > 0) {
-      enemigo3.HP = enemigo3.HP - (daño * 100) / 100;
+    if (enemigos[0].HP > 0) {
+      enemigos[0].HP = enemigos[0].HP - (daño * 100) / 100;
+      enemigos[1].HP = enemigos[1].HP - daño * 0;
+      enemigos[2].HP = enemigos[2].HP - daño * 0;
+    } else if (enemigos[2].HP > 0) {
+      enemigos[1].HP = enemigos[1].HP - (daño * 100) / 100;
+      enemigo[2].HP = enemigos[2].HP - daño * 0;
+    } else if (enemigo[3].HP > 0) {
+      enemigo[2].HP = enemigos[2].HP - (daño * 100) / 100;
     }
   } else alert("¡estamina insuficiente!");
 }
 function lanza_carbonII() {
   cooldownLANZ = 0;
-  if (estamina >= 10 && cooldownLANZ <= 1) {
-    if (enemigo1.HP > 0) {
-      enemigo1.HP = enemigo1.HP - (daño * 125) / 100;
-      enemigo2.HP = enemigo2.HP - daño * 0;
-      enemigo3.HP = enemigo3.HP - daño * 0;
-    } else if (enemigo2.HP > 0) {
-      enemigo2.HP = enemigo2.HP - (daño * 125) / 100;
-      enemigo3.HP = enemigo3.HP - daño * 0;
-    } else if (enemigo3.HP > 0) {
-      enemigo3.HP = enemigo3.HP - (daño * 125) / 100;
+  if (estamina >= 5 && cooldownLANZ <= 1) {
+    if (enemigos[0].HP > 0) {
+      enemigos[0].HP = enemigos[0].HP - (daño * 125) / 100;
+      enemigos[1].HP = enemigos[1].HP - daño * 0;
+      enemigos[2].HP = enemigos[2].HP - daño * 0;
+    } else if (enemigos[2].HP > 0) {
+      enemigos[1].HP = enemigos[1].HP - (daño * 125) / 100;
+      enemigo[2].HP = enemigos[2].HP - daño * 0;
+    } else if (enemigo[3].HP > 0) {
+      enemigo[2].HP = enemigos[2].HP - (daño * 125) / 100;
     }
   } else alert("¡estamina insuficiente!");
 }
 function lanza_carbonIII() {
   cooldownLANZ = 0;
-  if (estamina >= 15 && cooldownLANZ <= 1) {
-    if (enemigo1.HP > 0) {
-      enemigo1.HP = enemigo1.HP - (daño * 150) / 100;
-      enemigo2.HP = enemigo2.HP - daño * 0;
-      enemigo3.HP = enemigo3.HP - daño * 0;
-    } else if (enemigo2.HP > 0) {
-      enemigo2.HP = enemigo2.HP - (daño * 150) / 100;
-      enemigo3.HP = enemigo3.HP - daño * 0;
-    } else if (enemigo3.HP > 0) {
-      enemigo3.HP = enemigo3.HP - (daño * 150) / 100;
+  if (estamina >= 5 && cooldownLANZ <= 1) {
+    if (enemigos[0].HP > 0) {
+      enemigos[0].HP = enemigos[0].HP - (daño * 150) / 100;
+      enemigos[1].HP = enemigos[1].HP - daño * 0;
+      enemigos[2].HP = enemigos[2].HP - daño * 0;
+    } else if (enemigos[1].HP > 0) {
+      enemigos[1].HP = enemigos[1].HP - (daño * 150) / 100;
+      enemigo[2].HP = enemigos[2].HP - daño * 0;
+    } else if (enemigo[2].HP > 0) {
+      enemigo[2].HP = enemigos[2].HP - (daño * 150) / 100;
     }
   } else alert("¡estamina insuficiente!");
 }
 function lanza_carbon_llamasI() {
   cooldownLLA = 0;
   if (estamina >= 20 && cooldownLLA <= 4) {
-    if (enemigo1.HP > 0) {
-      enemigo1.HP = enemigo1.HP - (daño * 160) / 100;
-      enemigo2.HP = enemigo2.HP - daño * 0;
-      enemigo3.HP = enemigo3.HP - daño * 0;
-      enemigo1.DEF = enemigo1.DEF - 1;
-    } else if (enemigo2.HP > 0) {
-      enemigo2.HP = enemigo2.HP - (daño * 160) / 100;
-      enemigo3.HP = enemigo3.HP - daño * 0;
-      enemigo2.HP = enemigo2.DEF - 1;
-    } else if (enemigo3.HP > 0) {
-      enemigo3.HP = enemigo3.HP - (daño * 160) / 100;
-      enemigo1.DEF = enemigo1.DEF - 1;
+    cooldownLANZ = 0;
+  if (estamina >= 5 && cooldownLANZ <= 1) {
+    if (enemigos[0].HP > 0) {
+      enemigos[0].HP = enemigos[0].HP - (daño * 160) / 100;
+      enemigos[1].HP = enemigos[1].HP - daño * 0;
+      enemigos[2].HP = enemigos[2].HP - daño * 0;
+      enemigos[0].fuego == true;
+    } else if (enemigos[1].HP > 0) {
+      enemigos[1].HP = enemigos[1].HP - (daño * 160) / 100;
+      enemigo[2].HP = enemigos[2].HP - daño * 0;
+      enemigos[1].fuego == true;
+
+    } else if (enemigo[2].HP > 0) {
+      enemigo[2].HP = enemigos[2].HP - (daño * 160) / 100;
+      enemigos[2].fuego == true;
+
     }
+  } else alert("¡estamina insuficiente!");
   } else alert("¡estamina insuficiente!");
 }
 function lanza_carbon_llamasII() {
@@ -479,4 +528,11 @@ function dañoMonstruo() {
     }
     turnoActual === "jugador";
   }
+}
+
+
+function sorteoHabilidades() {
+    const h = Math.floor(Math.random() * habilidades );
+    return habilidades[h];
+  
 }
