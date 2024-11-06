@@ -1,0 +1,13 @@
+
+{
+"name" : "minero" ,
+"ATK" : 5,
+"HPM": 100,
+"estamina" : 100 ,   
+"areaATK" : 0 ,
+"inmunidad" : false ,
+"fuego" : false ,
+"veneno" : false ,
+"lentitud" : false
+
+}

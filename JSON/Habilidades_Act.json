@@ -1,0 +1,328 @@
+[
+{
+"name" : "empalarI" ,
+"daño" : {
+    "valor": 125,
+    "unidad": "%" ,
+    "estadistica" : "ATK"
+  } ,
+  "cooldown" : 3 ,
+  "objetivos" : "todos" ,
+  "estamina" : 15
+} ,
+{
+    "name" : "empalarII" ,
+    "daño" : {
+        "valor": 150,
+        "unidad": "%" ,
+        "estadistica" : "ATK"
+      } ,
+      "cooldown" : 3 ,
+      "objetivos" : "todos",
+      "estamina" : 20 
+},
+{
+     "name" : "empalarIII" ,
+     "daño" : {
+        "valor": 200,
+        "unidad": "%" ,
+        "estadistica" : "ATK"
+      } ,
+      "cooldown" : 3 ,
+      "objetivos" : "todos",
+      "estamina" : 25 
+},
+{
+    "name" : "Luz_aturdidoraI" ,
+    "daño" : false ,
+     "cooldown" : 5 ,
+     "objetivos" : "todos",
+     "estamina" : 10 , 
+     "efecto" : "aturdirI"
+     },
+{
+    "name" : "Luz_aturdidoraII" ,
+    "daño" : false ,
+     "cooldown" : 5 ,
+     "objetivos" : "todos",
+     "estamina" : 15 , 
+     "efecto" : "aturdirII" 
+     },
+{
+    "name" : "Luz_aturdidoraIII" ,
+    "daño" : false ,
+     "cooldown" : 5 ,
+     "objetivos" : "todos",
+     "estamina" : 20 , 
+     "efecto" : "aturdirIII" 
+     },
+{
+        "name" : "Lanza_carbónI" ,
+        "daño" : {
+           "valor": 120,
+           "unidad": "%" ,
+           "estadistica" : "ATK"
+         } ,
+         "cooldown" : 1 ,
+         "objetivos" : 1,
+         "estamina" : 5 
+   },
+   {
+    "name" : "Lanza_carbónII" ,
+    "daño" : {
+       "valor": 130,
+       "unidad": "%" ,
+       "estadistica" : "ATK"
+     } ,
+     "cooldown" : 1 ,
+     "objetivos" : 1,
+     "estamina" : 7 
+},
+{
+    "name" : "Lanza_carbónIII" ,
+    "daño" : {
+       "valor": 150,
+       "unidad": "%" ,
+       "estadistica" : "ATK"
+     } ,
+     "cooldown" : 1 ,
+     "objetivos" : 1,
+     "estamina" : 10
+},
+{
+    "name" : "Lanza_carbón_en_llamasI" ,
+    "daño" : {
+       "valor": 160,
+       "unidad": "%" ,
+       "estadistica" : "ATK"
+     } ,
+     "cooldown" : 4 ,
+     "objetivos" : 1,
+     "estamina" : 20 ,
+     "efecto" : {
+         "desc" : "quemaduraI" ,
+         "turnos" : 3
+     }
+},
+{
+    "name" : "Lanza_carbón_en_llamasII" ,
+    "daño" : {
+       "valor": 190,
+       "unidad": "%" ,
+       "estadistica" : "ATK"
+     } ,
+     "cooldown" : 4 ,
+     "objetivos" : 1,
+     "estamina" : 20 ,
+     "efecto" : {
+         "desc" : "quemaduraI" ,
+         "turnos" : 3
+     }
+},
+{
+    "name" : "Lanza_carbón_en_llamasIII" ,
+    "daño" : {
+       "valor": 220,
+       "unidad": "%" ,
+       "estadistica" : "ATK"
+     } ,
+     "cooldown" : 4 ,
+     "objetivos" : 1,
+     "estamina" : 20 ,
+     "efecto" : {
+         "desc" : "quemaduraII" ,
+         "turnos" : 3
+     }
+},
+{
+    "name" : "CavarI" ,
+    "daño" : false ,
+     "cooldown" : 4 ,
+     "objetivos" : "self",
+     "estamina" : 20 , 
+     "efecto" : "EvaciónI"
+     },
+{
+    "name" : "CavarII" ,
+    "daño" : false ,
+    "cooldown" : 4 ,
+    "objetivos" : "self",
+    "estamina" : 25 , 
+    "efecto" : "EvaciónII"
+},
+{
+    "name" : "CavarIII" ,
+    "daño" : false ,
+    "cooldown" : 4 ,
+    "objetivos" : "self",
+    "estamina" : 30 , 
+    "efecto" : "EvaciónIII"
+},
+{
+    "name" : "BombaI" ,
+    "daño" : {
+        "valor": 180,
+        "unidad": "%" ,
+        "estadistica" : "ATK"
+      } ,
+      "cooldown" : 7 ,
+      "objetivos" : "todos" ,
+      "estamina" : 35
+    } ,
+    {
+        "name" : "BombaII" ,
+        "daño" : {
+            "valor": 220,
+            "unidad": "%" ,
+            "estadistica" : "ATK"
+          } ,
+          "cooldown" : 7 ,
+          "objetivos" : "todos" ,
+          "estamina" : 45
+        } ,
+        {
+        "name" : "BombaIII" ,
+        "daño" : {
+            "valor": 250,
+        "unidad": "%" ,
+        "estadistica" : "ATK"
+          } ,
+          "cooldown" : 7 ,
+          "objetivos" : "todos" ,
+          "estamina" : 60
+        } ,
+{
+    "name" : "BoomerangI" ,
+    "daño" : {
+        "valor": 140,
+        "unidad": "%" ,
+        "estadistica" : "ATK"
+      } ,
+      "cooldown" : 5 ,
+      "objetivos" : "Selec" ,
+      "estamina" : 15 ,
+      "turnos" : 2
+    } ,
+    {
+    "name" : "BoomerangII" ,
+    "daño" : {
+        "valor": 175,
+        "unidad": "%" ,
+        "estadistica" : "ATK"
+      } ,
+      "cooldown" : 5 ,
+      "objetivos" : "Selec" ,
+      "estamina" : 25 ,
+      "turnos" : 2
+    } ,
+    {
+    "name" : "BoomerangIII" ,
+    "daño" : {
+        "valor": 200,
+        "unidad": "%" ,
+        "estadistica" : "ATK"
+      } ,
+      "cooldown" : 5 ,
+      "objetivos" : "Selec" ,
+      "estamina" : 30 ,
+      "turnos" : 2
+    } ,
+    {
+"name" : "Habilidad_final_Taladro" ,
+"daño" : {
+    "valor": 500,
+    "unidad": "%",
+    "estadistica" : "ATK"
+  } ,
+  "cooldown" : 10 ,
+  "objetivos" : "todos" ,
+  "estamina" : 15 ,
+  "efecto" :{   "desc" : "quemaduraIII" ,
+    "turnos" : 3
+}
+} ,
+{
+  "name" : "ChoripanI" ,
+  "daño" : false ,
+  "cooldown" : 8 ,
+  "objetivos" : "self",
+  "estamina" : 10 , 
+  "curación" : {
+    "valor" : 25,
+    "unidad" : "%" ,
+    "estadistica" : "MaxHP" 
+  }
+},
+{
+  "name" : "ChoripanII" ,
+  "daño" : false ,
+  "cooldown" : 8 ,
+  "objetivos" : "self",
+  "estamina" : 15 , 
+  "curación" : {
+    "valor" : 40,
+    "unidad" : "%" ,
+    "estadistica" : "MaxHP" 
+  }
+},
+{
+  "name" : "ChoripanIII" ,
+  "daño" : false ,
+  "cooldown" : 8 ,
+  "objetivos" : "self",
+  "estamina" : 20 , 
+  "curación" : {
+    "valor" : 55,
+    "unidad" : "%" ,
+    "estadistica" : "MaxHP" 
+  }
+},
+  {
+    "name" : "MateI" ,
+    "daño" : false ,
+    "cooldown" : 5 ,
+    "objetivos" : "self",
+    "estamina" : 5 , 
+    "efecto" : "inmunidadI"
+    },
+    {
+  "name" : "MateII" ,
+  "daño" : false ,
+  "cooldown" : 5 ,
+  "objetivos" : "self",
+  "estamina" : 10 , 
+  "efecto" : "inmunidadII"
+  },
+{
+  "name" : "MateIII" ,
+  "daño" : false ,
+  "cooldown" : 5 ,
+  "objetivos" : "self",
+  "estamina" : 15 , 
+  "efecto" : "inmunidadIII"
+  },
+  {
+  "name" : "Cristal_magicoI" ,
+  "daño" : false ,
+  "cooldown" : 6 ,
+  "objetivos" : "self",
+  "estamina" : 20 , 
+  "efecto" : "-cooldownI"
+  },
+  {
+  "name" : "Cristal_magicoII" ,
+  "daño" : false ,
+  "cooldown" : 6 ,
+  "objetivos" : "self",
+  "estamina" : 25 , 
+  "efecto" : "-cooldownII"
+  },
+  {
+  "name" : "Cristal_magicoIII" ,
+  "daño" : false ,
+  "cooldown" : 6 ,
+  "objetivos" : "self",
+  "estamina" : 30 , 
+  "efecto" : "-cooldownIII"
+  }
+]

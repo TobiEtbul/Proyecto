@@ -1,0 +1,15 @@
+ [
+    { "name" : "HPMax",
+        "Cvalue" : 100
+    },
+    { "name" : "ATKMax",
+        "Cvalue" : 5
+    },
+    { "name" : "DEFMax",
+        "Cvalue" : 1
+    },
+    { "name" : "estaminaMax",
+        "Cvalue" : 100
+    }
+    
+] 

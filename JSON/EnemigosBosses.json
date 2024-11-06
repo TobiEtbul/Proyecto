@@ -1,0 +1,51 @@
+[
+    {
+    "name" : "araña_reina" ,
+    "ATK" : 10 ,
+    "HP" : 500 ,
+    "DEF" : 3 ,
+    "habilityI" : {
+        "name" : "invocación" ,
+        "objet" : "araña" ,
+        "max" : 2 ,
+        "cooldown" : 6
+    } ,
+    "habilityII" : {
+        "name" : "venenoII" ,
+        "%" : 25 
+    } ,
+    "habilityIII" : false 
+    } ,
+    {"name": "demonio",
+    "ATK": 12,
+    "HP": 750,
+    "DEF": 10,
+    "habilityI": {
+        "name" : "quemaduraI" ,
+        "%" : 75
+    },
+    "habilityII": false,
+    "habilityIII": false
+    },
+        {
+        "name": "MineroMaligno",
+        "ATK": 18,
+        "HP": 1000,
+        "DEF": 15,
+        "habilityI": {
+            "name" : "maldición" ,
+            "curseI" : true ,
+            "cooldown" : 6
+        },
+        "habilityII": {
+            "name" : "devastador" ,
+            "%" : 10 ,
+            "daño" : {
+                "valor": 200,
+                "unidad": "%",
+                "estadistica" : "ATK"
+            }
+        },
+        "habilityIII": false
+    }
+]

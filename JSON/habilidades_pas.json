@@ -1,0 +1,30 @@
+[
+{
+"name" : "chimichurri" ,
+    "que_hace" : "choripan++"   
+    },
+{"name" : "+ATK",
+    "que_hace" : "ATK++"
+    } ,
+{"name" : "+HP",
+    "que_hace" : "HP++"
+    } ,
+{"name" : "+estamina",
+    "que_hace" : "estamina++"
+    } ,
+{"name" : "+defensa",
+    "que_hace" : "defensa++"
+    } ,
+{"name" : "+vampirismoI",
+    "que_hace" : "activa vampirismoI con cada golpe",
+    "vampirismoI" : true
+    } ,
+{"name" : "+vampirismoII",
+    "que_hace" : "activa vampirismoII con cada golpe",
+    "vampirismoII" : true
+    } ,
+    {"name" : "+vampirismoIII",
+    "que_hace" : "activa vampirismoIII con cada golpe",
+    "vampirismoIII" : true
+    } 
+]
