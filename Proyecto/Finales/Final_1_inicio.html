@@ -1,23 +1,44 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Agarra la pala</title>
-    <link href="Final_1_inicio.css" rel="stylesheet" type="text/css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
-  </head>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Agarra la pala</title>
+        <link href="Final_1_inicio.css" rel="stylesheet" type="text/css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap"
+            rel="stylesheet"
+        />
+    </head>
 
-  <body>
-    <div class="logo">
-      <img src="../Imagenes/Logo.png" />
-    </div>
-    <div class="botones_inicio">
-      <a href="Final_3_partida.html"> <button  type="button" class="botonjugar" >Jugar</button> </a>
-      <a href="Final_2_cristales.html"> <button type="button" class="botoncristales">Cristales</button> </a>
-      <a href="Creditos.html"> <button type="button" class="botonsalir">Creditos</button> </a>
-    </div>
-  </body>
+    <body>
+        <div class="logo">
+            <img src="../Imagenes/Logo.png" />
+        </div>
+        <div class="botones_inicio">
+            <button type="button" class="botonjugar" id="jugar">Jugar</button>
+            <a href="Final_2_cristales.html">
+                <button type="button" class="botoncristales">Cristales</button>
+            </a>
+            <a href="Creditos.html">
+                <button type="button" class="botonsalir">Creditos</button>
+            </a>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.4/socket.io.js"></script>
+
+        <script src="soquet.js"></script>
+
+        <script>
+            const $jugar = document.getElementById("jugar");
+            $jugar.addEventListener("click", () => {
+                postData("pedirEnemigos", null, (enemigos) => {
+                    console.log("enemigos: ", enemigos);
+                    localStorage.setItem("enemigos", JSON.stringify(enemigos));
+                    window.location.href = "Final_3_partida.html";
+                });
+            });
+        </script>
+    </body>
 </html>

@@ -2,7 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: "Metal Mania", system-ui; 
+    font-family: "Metal Mania", system-ui;
 }
 
 html {
@@ -15,7 +15,7 @@ html {
     width: 100%;
 }
 
-.atras4{
+.atras4 {
     position: absolute;
 }
 
@@ -50,4 +50,31 @@ html {
     padding-bottom: 3em;
     position: absolute;
     bottom: 0%;
+}
+
+#enemigosFoto {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 10em;
+    position: absolute;
+    top: 12em;
+    padding-right: 10em;
+    padding-left: 12em;
+}
+
+#enemigosFoto img {
+    height: 13em;
+    width: auto;
+}
+
+#enemigosFoto > img {
+    object-fit: fit;
+    width: auto;
+    height: 12em;
+}
+
+.contenedorTriple {
+    display: flex;
+    width: 33em;
 }
