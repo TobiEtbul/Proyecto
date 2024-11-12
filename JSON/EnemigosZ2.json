@@ -3,7 +3,6 @@
         "name": "siempiés",
         "ATK": 4,
         "HP": 130,
-        "DEF": 6,
         "habilityI": {
             "name": "venenoI",
             "%": 25
@@ -15,7 +14,6 @@
         "name": "araña",
         "ATK": 6,
         "HP": 75,
-        "DEF": 3,
         "habilityI": {
             "name": "venenoI",
             "%": 25
@@ -32,7 +30,6 @@
         "name": "mosquito",
         "ATK": 5,
         "HP": 80,
-        "DEF": 2,
         "habilityI": {
             "name"   : "vampirismoII" ,
             "%" : 50 ,
