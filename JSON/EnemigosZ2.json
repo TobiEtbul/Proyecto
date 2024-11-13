@@ -3,9 +3,10 @@
         "name": "siempiés",
         "ATK": 4,
         "HP": 130,
+        "fuego" : false,
         "habilityI": {
             "name": "venenoI",
-            "%": 25
+            "valor": 0.25
         },
         "habilityII": false,
         "habilityIII": false
@@ -14,26 +15,30 @@
         "name": "araña",
         "ATK": 6,
         "HP": 75,
-        "habilityI": {
-            "name": "venenoI",
-            "%": 25
-        },
+        "fuego" : false,
+
+        "habilityI": false ,
         "habilityII": {
+            "name": "venenoI",
+            "valor": 25
+        },
+        "habilityIII": {
             "name" : "lentitudI" ,
-            "%" : 10 ,
+            "valor" : 10 ,
             "cooldownPer" : -1
             
-        },
-        "habilityIII": false
+        }
     },
     {
         "name": "mosquito",
         "ATK": 5,
         "HP": 80,
+        "fuego" : false,
+
         "habilityI": {
-            "name"   : "vampirismoII" ,
-            "%" : 50 ,
-            "vampirismII" : true
+            "name"   : "vampirismo" ,
+            "valor" : 50 ,
+            "vampirismo" : true
         },
         "habilityII": false,
         "habilityIII": false
