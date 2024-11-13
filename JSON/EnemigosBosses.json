@@ -1,5 +1,18 @@
 [
     {
+        "name" : "vampiro" ,
+        "ATK" : 5 ,
+        "HP" : 225 ,
+        "habilityI" : {
+            "name": "vampirismo",
+            "vampirismo": true,
+            "valor": 25
+        } ,
+        "habilityII" : {
+        } ,
+        "habilityIII" : false 
+        } ,
+    {
     "name" : "araña_reina" ,
     "ATK" : 10 ,
     "HP" : 500 ,
@@ -11,16 +24,17 @@
     } ,
     "habilityII" : {
         "name" : "venenoII" ,
-        "%" : 25 
+        "valor" : 0.25 
     } ,
     "habilityIII" : false 
     } ,
-    {"name": "demonio",
+    {
+    "name": "demonio",
     "ATK": 12,
     "HP": 750,
     "habilityI": {
         "name" : "quemaduraI" ,
-        "%" : 75
+        "valor" : 0.75
     },
     "habilityII": false,
     "habilityIII": false
@@ -36,9 +50,9 @@
         },
         "habilityII": {
             "name" : "devastador" ,
-            "%" : 10 ,
+            "valor" : 0.10 ,
             "daño" : {
-                "valor": 200,
+                "ataque": 200,
                 "unidad": "%",
                 "estadistica" : "ATK"
             }
