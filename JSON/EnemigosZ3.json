@@ -3,8 +3,10 @@
             "name": "fuegoviviente",
             "ATK": 7,
             "HP": 75,
+            "fuego" : false,
+
             "habilityI": {
-                "name" : "quemaduraI" ,
+                "name" : "quemadura" ,
                 "quemarI" : true ,
                 "%" : 65 
             },
@@ -15,6 +17,8 @@
             "name": "golem",
             "ATK": 3,
             "HP": 200,
+            "fuego" : false,
+
             "habilityI": false,
             "habilityII": false,
             "habilityIII": false
@@ -24,15 +28,16 @@
             "name": "salamandra",
             "ATK": 6,
             "HP": 150,
+            "fuego" : false,
             "habilityI": {
-                "name" : "quemarI" ,
-                "quemaduraI" : true ,
-                "%" :50 
-                
+                "name" : "veneno" ,
+                "%" : 10 
             },
             "habilityII": {
-                "name" : "venenoIII" ,
-                "%" : 10 
+                "name" : "quemadura" ,
+                "feugoM" : true ,
+                "%" :50 
+                
             },
             "habilityIII": false
         }
