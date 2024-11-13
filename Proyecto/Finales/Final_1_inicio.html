@@ -18,7 +18,9 @@
             <img src="../Imagenes/Logo.png" />
         </div>
         <div class="botones_inicio">
+            <a href="Final_3_partida.html">
             <button type="button" class="botonjugar" id="jugar">Jugar</button>
+            </a>
             <a href="Final_2_cristales.html">
                 <button type="button" class="botoncristales">Cristales</button>
             </a>
@@ -31,6 +33,7 @@
         <script src="soquet.js"></script>
 
         <script>
+            alert("para funcionar el juego debe estar en pantalla completa");
             const $jugar = document.getElementById("jugar");
             $jugar.addEventListener("click", () => {
                 postData("pedirEnemigos", null, (enemigos) => {
@@ -40,5 +43,7 @@
                 });
             });
         </script>
+
+
     </body>
 </html>

@@ -11,7 +11,7 @@ html {
 }
 
 .parte_arriba5 {
-    height: 26em;
+    height: 28.1em;
     width: 100%;
 }
 
@@ -27,7 +27,7 @@ html {
 h1 {
     margin: 0;
     color: #ffe600;
-    font-size: 85px;
+    font-size: 70px;
     text-align: center;
     -webkit-text-stroke: 2px #ec9718;
     flex-direction: column;
@@ -38,8 +38,8 @@ h1 {
     justify-content: center;
 }
 .mapa > div {
-    width: 110px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     position: relative;
     border: solid #000000 5px;
     background: #A46F25;
@@ -56,7 +56,13 @@ h1 {
     align-items: center;
     width: 100%;
 }
+.mapa > div:nth-child(1) {
+    background: #FDD246;
+}
 .mapa > div:nth-child(5) {
+    background: #FDD246;
+}
+.mapa > div:nth-child(9) {
     background: #FDD246;
 }
 .mapa > div:nth-child(10) {
@@ -80,5 +86,32 @@ h2 {
     font-size: 60px;
     -webkit-text-stroke: 1px #ec9718;
     flex-direction: column;
-    margin-top: 10px;
+    margin-top: 5px;
+}
+
+#enemigosFoto {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 10em;
+    position: absolute;
+    top: 12em;
+    padding-right: 10em;
+    padding-left: 12em;
+}
+
+#enemigosFoto img {
+    height: 13em;
+    width: auto;
+}
+
+#enemigosFoto > img {
+    object-fit: fit;
+    width: auto;
+    height: 12em;
+}
+
+.contenedorTriple {
+    display: flex;
+    width: 33em;
 }

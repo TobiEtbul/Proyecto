@@ -58,3 +58,30 @@ h1 {
     margin-bottom: 3%;
     margin-top: 2%;
 }
+
+#enemigosFoto {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 10em;
+    position: absolute;
+    top: 12em;
+    padding-right: 10em;
+    padding-left: 12em;
+}
+
+#enemigosFoto img {
+    height: 13em;
+    width: auto;
+}
+
+#enemigosFoto > img {
+    object-fit: fit;
+    width: auto;
+    height: 12em;
+}
+
+.contenedorTriple {
+    display: flex;
+    width: 33em;
+}
