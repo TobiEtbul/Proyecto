@@ -3,10 +3,12 @@
         "name": "murciélago",
         "ATK": 5,
         "HP": 35,
-        "HabilityI": {
-            "name": "vampirismoI",
-            "vampirismI": true,
-            "%": 25
+        "fuego" : false,
+
+        "habilityI": {
+            "name": "vampirismo",
+            "vampirismo": true,
+            "valor": 25
         },
         "habilityII": false,
         "habilityIII": false
@@ -15,6 +17,8 @@
         "name": "slime",
         "ATK": 4,
         "HP": 60,
+        "fuego" : false,
+
         "habilityI": false,
         "habilityII": false,
         "habilityIII": false
@@ -23,6 +27,8 @@
         "name": "Esqueleto",
         "ATK": 2,
         "HP": 100,
+        "fuego" : false,
+
         "habilityI": false,
         "habilityII": false,
         "habilityIII": false
