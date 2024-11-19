@@ -597,7 +597,10 @@ if(enemigos[2].habilityIII.name == "veneno") {
   }
   turnoActual === "jugador";
 } }
-  }}
+  }
+  if (turnoActual === "enemigos") {
+    dañoMonstruo
+  }
     let objetoObtenido = []  ;
 
 function sorteoHabilidades() {
