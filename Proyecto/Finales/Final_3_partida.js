@@ -17,3 +17,17 @@ $enemigos[2].src =
     "http://localhost:5500/Proyecto/Imagenes/Enemigos/" +
     enemigos.enemigo3.name.toLowerCase() +
     ".png";
+
+let minero = {
+    name: "minero",
+    ATK: 5,
+    HPM: 100,
+    estamina: 100,
+    areaATK: 0,
+    inmunidad: false,
+    fuego: false,
+    veneno: false,
+    lentitud: false,
+};
+
+console.log(enemigos.enemigo1.HP);

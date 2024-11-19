@@ -1,7 +1,7 @@
 
 {
 "name" : "minero" ,
-"ATK" : 5,
+"ATK" : 10,
 "HPM": 100,
 "estamina" : 100 ,   
 "areaATK" : 0 ,
