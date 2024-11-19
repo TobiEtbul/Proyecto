@@ -520,7 +520,7 @@ function cooldownCrisMagico() {
   } else alert("habilidad lista!");
 }
 function dañoMonstruo() {
-  if (turnoActual === "enemigos") {
+  
     for (let i = 0; i < enemigos.length; i++) {
     var element = enemigos[i];
     vidaM = vidaM - element.ATK;
