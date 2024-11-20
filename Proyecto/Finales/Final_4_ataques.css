@@ -66,12 +66,29 @@ html {
 #enemigosFoto img {
     height: 13em;
     width: auto;
+    position: relative;
 }
 
 #enemigosFoto > img {
     object-fit: fit;
     width: auto;
     height: 12em;
+}
+
+.barraDeVida {
+    top: -1em;
+    position: absolute;
+    width: 10em;
+    height: 1em;
+    z-index: 0;
+    background-color: gray;
+}
+
+.barraDeVida > div{
+    z-index: 10;
+    height: 1em;
+    width: 100%;
+    background-color: green;
 }
 
 .contenedorTriple {
