@@ -42,6 +42,13 @@ onEvent("pedirEnemigos", () => {
     console.log(data)
     return data;
 });
+
+onEvent("golpear", () => {
+    const a = golpeJugador()
+    console.log(a)
+    return a
+})
+
 onEvent ("Empalar1", () => {
     empalarI()
 })

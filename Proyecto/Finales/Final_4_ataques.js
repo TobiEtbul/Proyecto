@@ -31,4 +31,10 @@ function restarVida(enemigo, ataque, enemigoID) {
     console.log(barra)
 }
 
-restarVida(enemigos.enemigo2, 20, 2);
+const $golpear = document.getElementById("golpear")
+$golpear.addEventListener("click", () => {
+    console.log("clicked")
+    fetchData("golpear", (enemigos) => {
+        console.log(enemigos)
+    })
+})

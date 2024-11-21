@@ -6,7 +6,7 @@ let algoV = document.querySelector('#toggleButtonV');
 
 let crystalCount = parseInt(cristales.textContent);
 
-algoV.addEventListener('click', function() {
+algoV.addEventListener('click',  function() {
     if (crystalCount > 1) {
     if (currentSquareV < squaresV.length) {
         squaresV[currentSquareV].classList.add('active'); 
@@ -24,7 +24,7 @@ let currentSquareDe = 0;
 
 let algoDe = document.querySelector('#toggleButtonDe');
 
-algoDe.addEventListener('click', function() {
+algoDe.addEventListener('click',  function() {
     if (crystalCount > 1) {
     if (currentSquareDe < squaresDe.length) {
         squaresDe[currentSquareDe].classList.add('active'); 
@@ -39,7 +39,7 @@ let currentSquareDa = 0;
 
 let algoDa = document.querySelector('#toggleButtonDa');
 
-algoDa.addEventListener('click', function() {
+algoDa.addEventListener('click',  function() {
     if (crystalCount > 1) {
     if (currentSquareDa < squaresDa.length) {
         squaresDa[currentSquareDa].classList.add('active'); 
@@ -54,7 +54,7 @@ let currentSquareA = 0;
 
 let algoA = document.querySelector('#toggleButtonA');
 
-algoA.addEventListener('click', function() {
+algoA.addEventListener('click',  function() {
     if (crystalCount > 1) {
     if (currentSquareA < squaresA.length) {
         squaresA[currentSquareA].classList.add('active'); 
@@ -69,7 +69,7 @@ let currentSquareS = 0;
 
 let algoS = document.querySelector('#toggleButtonS');
 
-algoS.addEventListener('click', function() {
+algoS.addEventListener('click',  function() {
     if (crystalCount > 1) {
     if (currentSquareS < squaresS.length) {
         squaresS[currentSquareS].classList.add('active'); 
