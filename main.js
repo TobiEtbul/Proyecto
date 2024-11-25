@@ -8,7 +8,7 @@ let habilidades_act = JSON.parse(fs.readFileSync("./JSON/Habilidades_act.json"))
 let habilidades_pas = JSON.parse(fs.readFileSync("./JSON/habilidades_pas.json"));
 
 
-let dataM = fs.readFileSync("./JSON/negro.json");
+let dataM = JSON.parse(fs.readFileSync("./JSON/negro.json"));
 
 var daño = dataM.ATK;
 var areaDMG = dataM.areaATK;
