@@ -3,6 +3,8 @@
             "name": "fuegoviviente",
             "ATK": 7,
             "HP": 75,
+            "HPM": 75,
+
             "fuego" : false,
 
             "habilityI": {
@@ -17,6 +19,8 @@
             "name": "golem",
             "ATK": 3,
             "HP": 200,
+            "HPM": 200,
+
             "fuego" : false,
 
             "habilityI": false,
@@ -28,6 +32,8 @@
             "name": "salamandra",
             "ATK": 6,
             "HP": 150,
+            "HPM": 150,
+
             "fuego" : false,
             "habilityI": {
                 "name" : "veneno" ,

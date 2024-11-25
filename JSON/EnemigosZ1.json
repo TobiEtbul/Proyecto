@@ -3,6 +3,7 @@
         "name": "murciélago",
         "ATK": 5,
         "HP": 35,
+        "HPM": 35,
         "fuego" : false,
 
         "habilityI": {
@@ -17,6 +18,8 @@
         "name": "slime",
         "ATK": 4,
         "HP": 60,
+        "HPM": 60,
+
         "fuego" : false,
 
         "habilityI": false,
@@ -27,6 +30,8 @@
         "name": "Esqueleto",
         "ATK": 2,
         "HP": 100,
+        "HPM": 100,
+
         "fuego" : false,
 
         "habilityI": false,

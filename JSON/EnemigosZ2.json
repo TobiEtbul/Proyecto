@@ -3,6 +3,8 @@
         "name": "siempiés",
         "ATK": 4,
         "HP": 130,
+        "HPM": 130,
+
         "fuego" : false,
         "habilityI": {
             "name": "venenoI",
@@ -15,6 +17,7 @@
         "name": "araña",
         "ATK": 6,
         "HP": 75,
+        "HPM": 75,
         "fuego" : false,
 
         "habilityI": false ,
@@ -33,6 +36,7 @@
         "name": "mosquito",
         "ATK": 5,
         "HP": 80,
+        "HPM": 80,
         "fuego" : false,
 
         "habilityI": {
