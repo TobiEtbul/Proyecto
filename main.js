@@ -651,3 +651,5 @@ for (let p = 0; p < 3; p++) {
 sorteoHabilidades() ;  
 }
 console.log(objetoObtenido) ;
+golpeJugador;
+console.log (enemigos[0].HP);
