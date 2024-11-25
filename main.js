@@ -1,5 +1,5 @@
 import { fork } from "child_process";
-import fs from "fs";
+import fs, { writeFileSync } from "fs";
 let enemigosZ1 = JSON.parse(fs.readFileSync("./JSON/EnemigosZ1.json"));
 let enemigosZ2 = JSON.parse(fs.readFileSync("./JSON/EnemigosZ2.json"));
 let enemigosZ3 = JSON.parse(fs.readFileSync("./JSON/EnemigosZ3.json"));
@@ -646,10 +646,9 @@ export function sorteoHabilidades() {
      objetoObtenido.push(habilidades[h]);
     return objetoObtenido
 }
-
-for (let p = 0; p < 3; p++) {
-sorteoHabilidades() ;  
+function cristalHP() {
+  vidaM = vidaM + 20
 }
-console.log(objetoObtenido) ;
-golpeJugador;
-console.log (enemigos[0].HP);
+function cristalDMG() {
+  daño = daño + 1
+}
