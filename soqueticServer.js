@@ -27,7 +27,8 @@ import {
     cristalMagicoI,
     cristalMagicoII,
     cristalMagicoIII,
-    sorteoHabilidades
+    sorteoHabilidades,
+    cambiarTurno
 } from "./main.js";
 
 onEvent("pedirEnemigos", () => {
@@ -45,78 +46,130 @@ onEvent("pedirEnemigos", () => {
 
 onEvent("golpear", () => {
     const a = golpeJugador()
-    console.log(a)
-    return a
+    console.log(a) ;
+    return a ;
 })
 
 onEvent ("Empalar1", () => {
-    empalarI()
+    const b = empalarI()
+    console.log(b);
+    return b ;
 })
 onEvent ("Empalar2", () => {
-    empalarII()
+    const c = empalarII()
+    console.log(c);
+    return c ;
 })
 onEvent ("Empalar3", () => {
-    empalarIII()
+    const d = empalarIII();
+    console.log(d);
+    return d;
 })
 onEvent ("lanza_carbon1", () => {
-    lanza_carbonI()
+    const e = lanza_carbonI()
+    console.log(e)
+    return e
 })
 onEvent ("lanza_carbon2", () => {
-    lanza_carbonII()
+    const f = lanza_carbonII()
+    console.log(f)
+    return f
 })
 onEvent ("lanza_carbon3", () => {
-    lanza_carbonIII()
+    const g =lanza_carbonIII()
+    console.log(g)
+    return g
 })
 onEvent ("lanza_carbon_llamas1", () => {
-    lanza_carbon_llamasI()
+    const h = lanza_carbon_llamasI()
+    console.log(h)
+    return h
 })
 onEvent ("lanza_carbon_llamas2", () => {
-    lanza_carbon_llamasII()
+    const i =lanza_carbon_llamasII()
+    console.log(i)
+    return i
 })
 onEvent ("lanza_carbon_llamas3", () => {
-    lanza_carbon_llamasIII()
+    const j = lanza_carbon_llamasIII()
+    console.log(j)
+    return j
 })
 onEvent ("cuchillo_venenoso1", () => {
-    cuchillo_venenosoI()
+    const k  = cuchillo_venenosoI()
+    console.log (k)
+    return k
 })
 onEvent ("cuchillo_venenoso2", () => {
-    cuchillo_venenosoII()
+    const l = cuchillo_venenosoII()
+    console.log(l)
+    return l
 })
 onEvent ("cuchillo_venenoso3", () => {
-    cuchillo_venenosoIII()
+    const m = cuchillo_venenosoIII()
+    console.log(m)
+    return m
 })
 onEvent ("bomba1", () => {
-    bombaI()
+    const n =bombaI()
+    console.log(n)
+    return n
 })
 onEvent ("bomba2", () => {
-    bombaII()
+    const ñ = bombaII()
+    console.log(ñ)
+    return ñ
 })
 onEvent ("bomba3", () => {
-    bombaIII()
+    const o = bombaIII()
+    console.log(o)
+    return o
 })
 onEvent ("habilidad_final1", () => {
-    habilidad_final()
+    const p = habilidad_final()
+    console.log(p)
+    return p
 })
 onEvent ("mate1", () => {
-    mate()
+    const q = mate()
+    console.log(q)
+    return q
 })
 onEvent ("choripan1", () => {
-    choripanI()
+    const r = choripanI()
+    console.log(r)
+    return r
 })
 onEvent ("choripan2", () => {
-    choripanII()
+    const s = choripanII()
+    console.log(s)
+    return s
+    
 })
 onEvent ("choripan3", () => {
-    choripanIII()
+    const t = choripanIII()
+    console.log(t)
+    return t
 })
 onEvent ("cristalMagico1", () => {
-    cristalMagicoI()
+    const u = cristalMagicoI()
+    console.log(u)
+    return u
 })
 onEvent ("cristalMagico2", () => {
-    cristalMagicoII()
+    const v = cristalMagicoII()
+    console.log(v)
+    return v
 })
 onEvent ("cristalMagico3", () => {
-    cristalMagicoIII()
+    const w = cristalMagicoIII()
+    console.log(w)
+    return w
+})
+onEvent ("pasar", () => {
+    const x = cambiarTurno()
+    console.log(x)
+    return x
 })
 
 startServer();
