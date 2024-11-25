@@ -27,7 +27,8 @@ import {
     cristalMagicoI,
     cristalMagicoII,
     cristalMagicoIII,
-    sorteoHabilidades
+    sorteoHabilidades,
+    cambiarTurno
 } from "./main.js";
 
 onEvent("pedirEnemigos", () => {
@@ -161,9 +162,14 @@ onEvent ("cristalMagico2", () => {
     return v
 })
 onEvent ("cristalMagico3", () => {
-    const v = cristalMagicoIII()
-    console.log(v)
-    return v
+    const w = cristalMagicoIII()
+    console.log(w)
+    return w
+})
+onEvent ("pasar", () => {
+    const x = cambiarTurno()
+    console.log(x)
+    return x
 })
 
 startServer();
