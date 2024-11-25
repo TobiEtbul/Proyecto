@@ -31,3 +31,12 @@ let minero = {
 };
 
 console.log(enemigos.enemigo1.HP);
+
+
+const $pasar = document.getElementById("Pasar")
+$pasar.addEventListener("click", () => {
+    console.log("clicked")
+    fetchData("cambiarTurno", (Pasar) => {
+    })
+    console.log(Pasar)
+})

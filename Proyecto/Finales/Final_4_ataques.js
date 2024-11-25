@@ -4,6 +4,7 @@ const $enemigos = [
     document.getElementById("enemigo3"),
 ];
 const enemigos = JSON.parse(localStorage.getItem("enemigos"));
+
 enemigos.enemigo1["initialVida"] = enemigos.enemigo1.HP;
 enemigos.enemigo2["initialVida"] = enemigos.enemigo2.HP;
 enemigos.enemigo3["initialVida"] = enemigos.enemigo3.HP;
@@ -21,9 +22,9 @@ $enemigos[2].src =
     enemigos.enemigo3.name.toLowerCase() +
     ".png";
 
-function restarVida(enemigo, ataque, enemigoID) {
+function restarVida( enemigo, ataque, enemigoID) {
     console.log(enemigo);
-    enemigo.HP -= ataque;
+    
     //actualizar barra de vida.
     const barra = document.querySelector("#vidaEnemigo" + enemigoID);
     barra.style.width =
