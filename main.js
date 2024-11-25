@@ -650,5 +650,11 @@ function cristalHP() {
   vidaM = vidaM + 20
 }
 function cristalDMG() {
-  daño = daño + 1
+  daño = daño + 2
+}
+function cristalEST() {
+  estamina = estammina + 20
+}
+function cristalADMG() {
+  areaDMG = areaDMG + 1
 }
