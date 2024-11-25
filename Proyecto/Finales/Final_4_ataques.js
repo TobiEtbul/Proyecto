@@ -25,11 +25,13 @@ $enemigos[2].src =
 function restarVida( enemigo, ataque, enemigoID) {
     console.log(enemigo);
     
-    //actualizar barra de vida.
-    const barra = document.querySelector("#vidaEnemigo" + enemigoID);
-    barra.style.width =
-        (enemigo.HP / enemigo["initialVida"]) * 100 + "%";
-    console.log(barra)
+
+}
+
+function acutalizarBarra(enemigo, barra) {
+    let porcentajeVida = enemigo.HP * 100 / enemigo.HPT;
+        barra.style.width =
+            porcentajeVida + "%";
 }
 
 const $golpear = document.getElementById("golpear")
@@ -38,4 +40,13 @@ $golpear.addEventListener("click", () => {
     fetchData("golpear", (enemigos) => {
         console.log(enemigos)
     })
+    acutalizarBarra($enemigos[0], barras[0])
+    acutalizarBarra($enemigos[1], barras[1])
+    acutalizarBarra($enemigos[2], barras[2])
 })
+
+barras = [
+    document.getElementById("vidaEnemigo1"),
+    document.getElementById("vidaEnemigo2"),
+    document.getElementById("vidaEnemigo3")
+]

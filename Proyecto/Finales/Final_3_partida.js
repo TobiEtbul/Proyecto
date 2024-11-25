@@ -3,6 +3,7 @@ const $enemigos = [
     document.getElementById("enemigo2"),
     document.getElementById("enemigo3"),
 ];
+connect2server()
 console.log($enemigos);
 const enemigos = JSON.parse(localStorage.getItem("enemigos"));
 $enemigos[0].src =
