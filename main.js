@@ -49,20 +49,20 @@ console.log(enemigos[1].HP);
 console.log(enemigos[2].HP);
 
 let turnoActual = "jugador"; // Inicia el turno el jugador
-let cooldowns = [
-  cooldownEMP = 3,
-  cooldownLANZ = 1,
-  cooldownsLLA = 4,
-  cooldownCUC = 5,
-  cooldownBOM = 7,
-  cooldownFinal = 10,
-  cooldownMate = 5,
-  cooldownChor = 7,
-  cooldownCris = 6
-]
+let cooldowns = {
+  cooldownEMP: 3,
+  cooldownLANZ: 1,
+  cooldownsLLA: 4,
+  cooldownCUC: 5,
+  cooldownBOM: 7,
+  cooldownFinal: 10,
+  cooldownMate: 5,
+  cooldownChor: 7,
+  cooldownCris: 6
+}
 
 // Función para cambiar de turno
-function cambiarTurno() {
+export function cambiarTurno() {
   if (turnoActual === "jugador") {
     turnoActual = "enemigos";
     cooldownBomba();
@@ -81,7 +81,7 @@ function cambiarTurno() {
 }
 console.log(`Turno actual: ${turnoActual}`);
 
-function sacar_habilidades() {
+export function sacar_habilidades() {
   inmunidad = true;
   if ((inmunidad = true)) {
     fuego = false;
@@ -89,7 +89,7 @@ function sacar_habilidades() {
     lentitud = false;
   }
 }
-function lentitudF() {
+export function lentitudF() {
   lentitud = true;
   if ((lentitud = true)) {
     cooldowns[0]--;
@@ -104,13 +104,13 @@ function lentitudF() {
     lentitud = false;
   }
 }
-function fuegoE() {
+export function fuegoE() {
   fuego = true;
   if ((fuego = true)) {
     HPM = HPM - 5;
   }
 }
-function fuego1() {
+export function fuego1() {
 let fueguito = 0
   if (enemigos[0].fuego == true && fueguito < 3) {
   enemigos[0].HP = enemigos[0].HP - 10;
@@ -120,7 +120,7 @@ enemigos[0].fuego == false;
 fueguito = 0;
 }
 }
-function fuego2() {
+export function fuego2() {
   let fueguito = 0
     if (enemigos[1].fuego == true && fueguito < 3) {
     fueguito++ ;
@@ -129,7 +129,7 @@ function fuego2() {
   enemigos[1].fuego == false;
   }
 }
-function fuego3() {
+export function fuego3() {
     let fueguito = 0
       if (enemigos[2].fuego == true && fueguito < 3) {
       fueguito++ ;
@@ -138,7 +138,7 @@ function fuego3() {
     enemigos[2].fuego == false;
     }
 }
-function golpeJugador() {
+export function golpeJugador() {
   if (enemigos[0].HP > 0) {
     enemigos[0].HP = enemigos[0].HP - daño;
     enemigos[1].HP = enemigos[1].HP - areaDMG;
@@ -149,9 +149,9 @@ function golpeJugador() {
   } else if (enemigos[2].HP > 0) {
     enemigos[2].HP = enemigos[2].HP - daño;
   }
-  return (enemigos.length.HP);
+  return (enemigos);
 }
-function emplalarI() {
+export function empalarI() {
   if (estamina >= 15 && cooldowns[0] <= 3) {
     cooldowns[0] = 0;
     if (enemigos[0].HP > 0) {
@@ -168,7 +168,7 @@ function emplalarI() {
   } else console.log("¡estamina insuficiente!");
 
 }
-function emplalarII() {
+export function empalarII() {
   cooldowns[0] = 0;
     if (estamina >= 20 && cooldowns[0] <= 3 && turnoActual == 'jugador') {
       cooldowns[0] = 0;
@@ -186,7 +186,7 @@ function emplalarII() {
 
     } else console.log("¡estamina insuficiente!");
 }
-function emplalarIII() {
+export function empalarIII() {
   if (estamina >= 25 && cooldowns[0] <= 3 && turnoActual == 'jugador') {
     cooldowns[0] = 0;
     if (enemigos[0].HP > 0) {
@@ -203,7 +203,7 @@ function emplalarIII() {
 
   } else console.log("¡estamina insuficiente!");
 }
-function lanza_carbonI() {
+export function lanza_carbonI() {
   if (estamina >= 5 && cooldowns[1] <= 1 && turnoActual == 'jugador') {
     cooldowns[1] = 0;
     if (enemigos[0].HP > 0) {
@@ -219,7 +219,7 @@ function lanza_carbonI() {
     return (enemigos);
   } else console.log("¡estamina insuficiente!");
 }
-function lanza_carbonII() {
+export function lanza_carbonII() {
   cooldowns[1] = 0;
   if (estamina >= 7 && cooldowns[1] <= 1 && turnoActual == 'jugador') {
     cooldowns[1] = 0;
@@ -236,7 +236,7 @@ function lanza_carbonII() {
     return (enemigos);
   } else console.log("¡estamina insuficiente!");
 }
-function lanza_carbonIII() {
+export function lanza_carbonIII() {
   cooldowns[1] = 0;
   if (estamina >= 10 && cooldowns[1] <= 1 && turnoActual == 'jugador') {
     cooldowns[1] = 0;
@@ -253,7 +253,7 @@ function lanza_carbonIII() {
     return (enemigos);
   } else console.log("¡estamina insuficiente!");
 }
-function lanza_carbon_llamasI() {
+export function lanza_carbon_llamasI() {
   if (estamina >= 20 && cooldowns[2] <= 4 && turnoActual == 'jugador') {
     cooldowns[2] = 0;
  
@@ -275,7 +275,7 @@ function lanza_carbon_llamasI() {
     return (enemigos);
   } else console.log("¡estamina insuficiente!");
 }
-function lanza_carbon_llamasII() {
+export function lanza_carbon_llamasII() {
   if (estamina >= 25 && cooldowns[2] <= 4 && turnoActual == 'jugador') {
     cooldowns[2] = 0;
     if (enemigos[0].HP > 0) {
@@ -296,7 +296,7 @@ function lanza_carbon_llamasII() {
     return (enemigos);
 } else console.log("¡estamina insuficiente!");
 }
-function lanza_carbon_llamasIII() {
+export function lanza_carbon_llamasIII() {
   if (estamina >= 30 && cooldowns[2] <= 4 && turnoActual == 'jugador') {
     cooldowns[2] = 0;
     if (enemigos[0].HP > 0) {
@@ -317,7 +317,7 @@ function lanza_carbon_llamasIII() {
     return (enemigos);
   } else console.log("¡estamina insuficiente!");
 }
-function cuchillo_venenosoI() {
+export function cuchillo_venenosoI() {
   if (estamina >= 25 && cooldowns[3] <= 5 && turnoActual == 'jugador') {
     cooldowns[3] = 0;
     if (enemigos[0].HP > 0) {
@@ -334,7 +334,7 @@ function cuchillo_venenosoI() {
 
   } else console.log("¡estamina insuficiente!");
 }
-function cuchillo_venenosoII() {
+export function cuchillo_venenosoII() {
   if (estamina >= 30 && cooldowns[3] <= 5 && turnoActual == 'jugador') {
     cooldowns[3] = 0;
     if (enemigos[0].HP > 0) {
@@ -350,7 +350,7 @@ function cuchillo_venenosoII() {
     return (enemigos);
   } else console.log("¡estamina insuficiente!");
 }
-function cuchillo_venenosoIII() {
+export function cuchillo_venenosoIII() {
   if (estamina >= 30 && cooldowns[3] <= 5) {
     cooldowns[3] = 0;
     if (enemigo1.HP > 0) {
@@ -369,7 +369,7 @@ function cuchillo_venenosoIII() {
     return (enemigos);
   } else console.log("¡estamina insuficiente!");
 }
-function bombaI() {
+export function bombaI() {
   if (estamina >= 35 && cooldowns[4] <= 7) {
     cooldowns[4] = 0;
 
@@ -387,7 +387,7 @@ function bombaI() {
 
   } else console.log("¡estamina insuficiente!");
 }
-function bombaII() {
+export function bombaII() {
   if (estamina >= 45 && cooldowns[4] <= 7) {
     cooldowns[4] = 0;
 
@@ -405,7 +405,7 @@ function bombaII() {
 
   } else console.log("¡estamina insuficiente!");
 }
-function bombaIII() {
+export function bombaIII() {
   if (estamina >= 60 && cooldowns[4] <= 7) {
     cooldowns[4] = 0;
     if (enemigo1.HP > 0) {
@@ -422,7 +422,7 @@ function bombaIII() {
 
   } else console.log("¡estamina insuficiente!");
 }
-function habilidad_final() {
+export function habilidad_final() {
   if (estamina >= 70 && cooldowns[5] <= 10) {
     cooldowns[5] = 0;
     if (enemigo1.HP > 0) {
@@ -445,7 +445,7 @@ function habilidad_final() {
 
   } else console.log("¡estamina insuficiente!");
 }
-function mate() {
+export function mate() {
   if (estamina >= 5 && cooldowns[6] <= 5) {
     inmunidad = true;
     sacar_habilidades();
@@ -454,28 +454,28 @@ function mate() {
 
   } else console.log("¡estamina insuficiente!");
 }
-function choripanI() {
+export function choripanI() {
   if (estamina >= 10 && cooldowns[7] <= 7) {
     vidaM = vidaM + (25 * vidaM) / 100;
     cooldowns[7] = 0;
     return(vidaM);
   } else console.log("¡estamina insuficiente!");
 }
-function choripanII() {
+export function choripanII() {
   if (estamina >= 15 && cooldowns[7] <= 7) {
     vidaM = vidaM + (40 * vidaM) / 100;
     cooldowns[7] = 0;
     return(vidaM);
   } else console.log("¡estamina insuficiente!");
 }
-function choripanIII() {
+export function choripanIII() {
   if (estamina >= 15 && cooldowns[7] <= 7) {
     vidaM = vidaM + (55 * vidaM) / 100;
     cooldowns[7] = 0;
     return(vidaM);
   } else console.log("¡estamina insuficiente!");
 }
-function cristalMagicoI() {
+export function cristalMagicoI() {
   if (estamina >= 20 && cooldowns[7] <= 6) {
     cooldownBomba();
     cooldownChoripan();
@@ -488,7 +488,7 @@ function cristalMagicoI() {
     cooldowns[8] = 0;
   } else console.log("¡estamina insuficiente!");
 }
-function cristalMagicoII() {
+export function cristalMagicoII() {
   if (estamina >= 25 && cooldowns[7] <= 6) {
     cristalMagicoI();
     cristalMagicoI();
@@ -496,7 +496,7 @@ function cristalMagicoII() {
     return
   } else console.log("¡estamina insuficiente!");
 }
-function cristalMagicoIII() {
+export function cristalMagicoIII() {
   if (estamina >= 30 && cooldowns[7] <= 6) {
     cristalMagicoII();
     cristalMagicoI();
@@ -504,60 +504,60 @@ function cristalMagicoIII() {
     cooldowns[8] = 0;
   } else console.log("¡estamina insuficiente!");
 }
-function cooldownEmpalar() {
+export function cooldownEmpalar() {
   if (turnoActual === "jugador" && cooldowns.cooldowns[0] < 3) {
     cooldowns[0]++;
   } else console.log("habilidad lista!");
 }
-function cooldownLanzaCar() {
+export function cooldownLanzaCar() {
   if (turnoActual === "jugador" && cooldowns[1] < 1) {
     cooldowns[1]++;
     return cooldowns[1];
   } else console.log("habilidad lista!");
 }
-function cooldownLanzaCarLla() {
+export function cooldownLanzaCarLla() {
   if (turnoActual === "jugador" && cooldowns[2] < 4) {
     cooldowns[2]++;
     return cooldowns[2];
   } else console.log("habilidad lista!");
 }
-function cooldownCuchillo() {
+export function cooldownCuchillo() {
   if (turnoActual === "jugador" && cooldowns[3] < 5) {
     cooldowns[3]++;
     return cooldowns[3];
   } else console.log("habilidad lista!");
 }
-function cooldownBomba() {
+export function cooldownBomba() {
   if (turnoActual === "jugador" && cooldowns[4] < 7) {
     cooldowns[4]++;
     return cooldowns[4];
   } else console.log("habilidad lista!");
 }
-function cooldownTaladro() {
+export function cooldownTaladro() {
   if (turnoActual === "jugador" && cooldowns[5] < 10) {
     cooldowns[5]++;
     return cooldowns[5];
   } else console.log("habilidad lista!");
 }
-function cooldownMatienzo() {
+export function cooldownMatienzo() {
   if (turnoActual === "jugador" && cooldowns[6] < 5) {
     cooldowns[6]++;
     return cooldowns[6];
   } else console.log("habilidad lista!");
 }
-function cooldownChoripan() {
+export function cooldownChoripan() {
   if (turnoActual === "jugador" && cooldowns[7] < 7) {
     cooldowns[7]++;
     return cooldowns[7];
   } else console.log("habilidad lista!");
 }
-function cooldownCrisMagico() {
+export function cooldownCrisMagico() {
   if (turnoActual === "jugador" && cooldowns[8] < 4) {
     cooldowns[8]++;
     return cooldowns[8];
   } else console.log("habilidad lista!");
 }
-function dañoMonstruo() {
+export function dañoMonstruo() {
   
     for (let i = 0; i < enemigos.length; i++) {
     var element = enemigos[i];
@@ -641,7 +641,7 @@ if(enemigos[2].habilityIII.name == "veneno") {
   }
     let objetoObtenido = []  ;
 
-function sorteoHabilidades() {
+export function sorteoHabilidades() {
     let h = Math.floor(Math.random() * habilidades.length);
      objetoObtenido.push(habilidades[h]);
     return objetoObtenido
