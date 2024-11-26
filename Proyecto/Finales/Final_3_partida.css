@@ -67,6 +67,7 @@ html {
 #enemigosFoto img {
     height: 13em;
     width: auto;
+    position: relative;
 }
 
 #enemigosFoto > img {
