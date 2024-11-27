@@ -154,7 +154,7 @@ export function golpeJugador() {
     enemigos[1].HP = enemigos[1].HP - areaDMG;
     enemigos[2].HP = enemigos[2].HP - areaDMG;
   } else if (enemigos[1].HP > 0) {
-    enemigos[1].HP = enemigo[1].HP - daño;
+    enemigos[1].HP = enemigos[1].HP - daño;
     enemigos[2].HP = enemigos[2].HP - areaDMG;
   } else if (enemigos[2].HP > 0) {
     enemigos[2].HP = enemigos[2].HP - daño;
