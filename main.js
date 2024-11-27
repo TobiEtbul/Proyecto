@@ -26,7 +26,7 @@ export function generarEnemigoAleatorioZ1() {
   for (let i = 0; i < enemigos.length; i++) {
     enemigos.pop    
   }
-  var i = Math.floor(Math.random() * enemigosZ1.length /2);
+  var i = Math.floor(Math.random() * enemigosZ1.length);
   var enemigo = enemigosZ1[i];
   enemigos.push(enemigo);
   console.log(enemigos);
@@ -36,7 +36,7 @@ export function generarEnemigoAleatorioZ2() {
   for (let i = 0; i < enemigos.length; i++) {
     enemigos.pop    
   }
-  var i = Math.floor(Math.random() * enemigosZ2.length/2);
+  var i = Math.floor(Math.random() * enemigosZ2.length);
   var enemigo = enemigosZ2[i];
   enemigos.push(enemigo);
   return enemigo;
@@ -45,7 +45,7 @@ export function generarEnemigoAleatorioZ3() {
   for (let i = 0; i < enemigos.length; i++) {
     enemigos.pop    
   }
-  var i = Math.floor(Math.random() * enemigosZ3.length/2);
+  var i = Math.floor(Math.random() * enemigosZ3.length);
   var enemigo = enemigosZ3[i];
   enemigos.push(enemigo);
   return enemigo;
@@ -153,10 +153,10 @@ export function golpeJugador() {
     enemigos[0].HP = enemigos[0].HP - daño;
     enemigos[1].HP = enemigos[1].HP - areaDMG;
     enemigos[2].HP = enemigos[2].HP - areaDMG;
-  } else if (enemigos[1].HP > 0) {
+  } else if (enemigos[0].HP <= 0) {
     enemigos[1].HP = enemigo[1].HP - daño;
     enemigos[2].HP = enemigos[2].HP - areaDMG;
-  } else if (enemigos[2].HP > 0) {
+  } else if (enemigos[1].HP <= 0) {
     enemigos[2].HP = enemigos[2].HP - daño;
   }
   return (enemigos);
