@@ -23,18 +23,21 @@ let habilidades = habilidades_act.concat(habilidades_pas);
 var enemigos = [];
 
 export function generarEnemigoAleatorioZ1() {
+  enemigos = [];
   var i = Math.floor(Math.random() * enemigosZ1.length);
   var enemigo = enemigosZ1[i];
   enemigos.push(enemigo);
   return enemigo;
 }
 export function generarEnemigoAleatorioZ2() {
+  enemigos = [];
   var i = Math.floor(Math.random() * enemigosZ2.length);
   var enemigo = enemigosZ2[i];
   enemigos.push(enemigo);
   return enemigo;
 }
 export function generarEnemigoAleatorioZ3() {
+  enemigos = [];
   var i = Math.floor(Math.random() * enemigosZ3.length);
   var enemigo = enemigosZ3[i];
   enemigos.push(enemigo);
