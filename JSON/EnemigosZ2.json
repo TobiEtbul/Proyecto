@@ -16,8 +16,8 @@
     {
         "name": "araña",
         "ATK": 6,
-        "HP": 75,
-        "HPM": 75,
+        "HP": 70,
+        "HPM": 70,
         "fuego" : false,
 
         "habilityI": false ,

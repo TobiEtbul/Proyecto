@@ -2,8 +2,8 @@
    {
         "name": "murciélago",
         "ATK": 5,
-        "HP": 35,
-        "HPM": 35,
+        "HP": 40,
+        "HPM": 40,
         "fuego" : false,
 
         "habilityI": {
