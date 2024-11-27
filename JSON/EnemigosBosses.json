@@ -2,8 +2,8 @@
     {
         "name" : "vampiro" ,
         "ATK" : 5 ,
-        "HP" : 225 ,
-        "HPM": 225,
+        "HP" : 220 ,
+        "HPM": 220,
 
         "habilityI" : {
             "name": "vampirismo",
