@@ -27,7 +27,7 @@
         "habilityIII": false
     },
     {
-        "name": "Esqueleto",
+        "name": "esqueleto",
         "ATK": 2,
         "HP": 100,
         "HPM": 100,
