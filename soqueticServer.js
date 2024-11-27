@@ -28,7 +28,11 @@ import {
     cristalMagicoII,
     cristalMagicoIII,
     sorteoHabilidades,
-    cambiarTurno
+    cambiarTurno,
+    cristalHP,
+    cristalADMG,
+    cristalDMG, 
+    cristalEST
 } from "./main.js";
 
 onEvent("pedirEnemigos", () => {
@@ -171,5 +175,24 @@ onEvent ("pasar", () => {
     console.log(x)
     return x
 })
-
+onEvent ("cristalVida", () => {
+    const y = cristalHP()
+    console.log(y)
+    return y
+})
+onEvent ("cristalDaño", () => {
+    const z = cristalDMG()
+    console.log(z)
+    return z
+})
+onEvent ("cristalEstamina", () => {
+    const aa = cristalEST()
+    console.log(aa)
+    return aa
+})
+onEvent ("cristalArea", () => {
+    const bb = cristalADMG()
+    console.log(bb)
+    return bb
+})
 startServer();

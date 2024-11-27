@@ -646,15 +646,15 @@ export function sorteoHabilidades() {
      objetoObtenido.push(habilidades[h]);
     return objetoObtenido
 }
-function cristalHP() {
+export function cristalHP() {
   vidaM = vidaM + 20
 }
-function cristalDMG() {
+export function cristalDMG() {
   daño = daño + 2
 }
-function cristalEST() {
+export function cristalEST() {
   estamina = estammina + 20
 }
-function cristalADMG() {
+export function cristalADMG() {
   areaDMG = areaDMG + 1
 }
