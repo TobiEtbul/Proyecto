@@ -24,7 +24,7 @@ var enemigos = [];
 
 export function generarEnemigoAleatorioZ1() {
   for (let i = 0; i < enemigos.length; i++) {
-    enemigos.pop    
+    enemigos.pop()   
   }
   var i = Math.floor(Math.random() * enemigosZ1.length);
   var enemigo = enemigosZ1[i];
@@ -34,7 +34,7 @@ export function generarEnemigoAleatorioZ1() {
 }
 export function generarEnemigoAleatorioZ2() {
   for (let i = 0; i < enemigos.length; i++) {
-    enemigos.pop    
+    enemigos.pop()
   }
   var i = Math.floor(Math.random() * enemigosZ2.length);
   var enemigo = enemigosZ2[i];
@@ -43,7 +43,7 @@ export function generarEnemigoAleatorioZ2() {
 }
 export function generarEnemigoAleatorioZ3() {
   for (let i = 0; i < enemigos.length; i++) {
-    enemigos.pop    
+    enemigos.pop() 
   }
   var i = Math.floor(Math.random() * enemigosZ3.length);
   var enemigo = enemigosZ3[i];
