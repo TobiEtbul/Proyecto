@@ -55,7 +55,7 @@ for (let j = 0; j < 3; j++) {
 }
 
 console.log(enemigos[0].HP);
-console.log(enemigos[4].HP);
+console.log(enemigos[1].HP);
 console.log(enemigos[2].HP);
 
 let turnoActual = "jugador"; // Inicia el turno el jugador
@@ -122,74 +122,75 @@ export function fuegoE() {
 }
 export function fuego1() {
 let fueguito = 0
-  if (enemigos[3].fuego == true && fueguito < 3) {
-  enemigos[3].HP = enemigos[3].HP - 10;
+  if (enemigos[0].fuego == true && fueguito < 3) {
+  enemigos[0].HP = enemigos[0].HP - 10;
   fueguito++ ;
-} else if (enemigos[3].fuego == true && fueguito >= 3) {
-enemigos[3].fuego == false;
+} else if (enemigos[0].fuego == true && fueguito >= 3) {
+enemigos[0].fuego == false;
 fueguito = 0;
 }
 }
 export function fuego2() {
   let fueguito = 0
-    if (enemigos[4].fuego == true && fueguito < 3) {
+    if (enemigos[1].fuego == true && fueguito < 3) {
     fueguito++ ;
-    enemigos[4].HP = enemigos[4].HP - 10;
-  } else if (enemigos[4].fuego == true && fueguito >= 3) {
-  enemigos[4].fuego == false;
+    enemigos[1].HP = enemigos[1].HP - 10;
+  } else if (enemigos[1].fuego == true && fueguito >= 3) {
+  enemigos[1].fuego == false;
   }
 }
 export function fuego3() {
     let fueguito = 0
-      if (enemigos[5].fuego == true && fueguito < 3) {
+      if (enemigos[2].fuego == true && fueguito < 3) {
       fueguito++ ;
-      enemigos[5].HP = enemigos[5].HP - 10;
-    } else if (enemigos[5].fuego == true && fueguito >= 3) {
-    enemigos[5].fuego == false;
+      enemigos[2].HP = enemigos[2].HP - 10;
+    } else if (enemigos[2].fuego == true && fueguito >= 3) {
+    enemigos[2].fuego == false;
     }
 }
 export function golpeJugador() {
-  if (enemigos[3].HP > 0) {
-    enemigos[3].HP = enemigos[3].HP - daño;
-    enemigos[4].HP = enemigos[4].HP - areaDMG;
-    enemigos[5].HP = enemigos[5].HP - areaDMG;
-  } else if (enemigos[4].HP > 0) {
-    enemigos[4].HP = enemigos[4].HP - daño;
-    enemigos[5].HP = enemigos[5].HP - areaDMG;
-  } else if (enemigos[5].HP > 0) {
-    enemigos[5].HP = enemigos[5].HP - daño;
+  if (enemigos[0].HP > 0) {
+    enemigos[0].HP = enemigos[0].HP - daño;
+    enemigos[1].HP = enemigos[1].HP - areaDMG;
+    enemigos[2].HP = enemigos[2].HP - areaDMG;
+  } else if (enemigos[1].HP > 0) {
+    enemigos[1].HP = enemigos[1].HP - daño;
+    enemigos[2].HP = enemigos[2].HP - areaDMG;
+  } else if (enemigos[2].HP > 0) {
+    enemigos[2].HP = enemigos[2].HP - daño;
   } 
   return (enemigos);
 }
 export function empalarI() {
   if (estamina >= 15 && cooldowns[0] <= 3) {
     cooldowns[0] = 0;
-    if (enemigos[3].HP > 0) {
-      enemigos[3].HP = enemigos[3].HP - (daño * 120) / 100;
-      enemigos[4].HP = enemigos[4].HP - (daño * 120) / 100;
-      enemigos[5].HP = enemigos[5].HP - (daño * 120) / 100;
-    } else if (enemigos[4].HP > 0) {
-      enemigos[4].HP = enemigos[4].HP - (daño * 120) / 100;
-      enemigos[5].HP = enemigos[5].HP - (daño * 120) / 100;
-    } else if (enemigos[5].HP > 0) {
-      enemigos[5].HP = enemigos[5].HP - (daño * 120) / 100;
+    if (enemigos[0].HP > 0) {
+      enemigos[0].HP = enemigos[0].HP - (daño * 120) / 100;
+      enemigos[1].HP = enemigos[1].HP - (daño * 120) / 100;
+      enemigos[2].HP = enemigos[2].HP - (daño * 120) / 100;
+    } else if (enemigos[1].HP > 0) {
+      enemigos[1].HP = enemigos[1].HP - (daño * 120) / 100;
+      enemigos[2].HP = enemigos[2].HP - (daño * 120) / 100;
+    } else if (enemigos[2].HP > 0) {
+      enemigos[2].HP = enemigos[2].HP - (daño * 120) / 100;
     }
     return (enemigos);
   } else console.log("¡estamina insuficiente!");
 
 }
 export function empalarII() {
+  cooldowns[0] = 0;
     if (estamina >= 20 && cooldowns[0] <= 3 && turnoActual == 'jugador') {
       cooldowns[0] = 0;
-      if (enemigos[3].HP > 0) {
-        enemigos[3].HP = enemigos[3].HP - (daño * 150) / 100;
-        enemigos[4].HP = enemigos[4].HP - (daño * 150) / 100;
-        enemigos[5].HP = enemigos[5].HP - (daño * 150) / 100;
-      } else if (enemigos[4].HP > 0) {
-        enemigos[4].HP = enemigos[4].HP - (daño * 150) / 100;
-        enemigos[5].HP = enemigos[5].HP - (daño * 150) / 100;
-      } else if (enemigos[5].HP > 0) {
-        enemigos[5].HP = enemigos[5].HP - (daño * 150) / 100;
+      if (enemigos[0].HP > 0) {
+        enemigos[0].HP = enemigos[0].HP - (daño * 150) / 100;
+        enemigos[1].HP = enemigos[1].HP - (daño * 150) / 100;
+        enemigos[2].HP = enemigos[2].HP - (daño * 150) / 100;
+      } else if (enemigos[1].HP > 0) {
+        enemigos[1].HP = enemigos[1].HP - (daño * 150) / 100;
+        enemigos[2].HP = enemigos[2].HP - (daño * 150) / 100;
+      } else if (enemigos[2].HP > 0) {
+        enemigos[2].HP = enemigos[2].HP - (daño * 150) / 100;
       }
       return (enemigos);
 
@@ -198,15 +199,15 @@ export function empalarII() {
 export function empalarIII() {
   if (estamina >= 25 && cooldowns[0] <= 3 && turnoActual == 'jugador') {
     cooldowns[0] = 0;
-    if (enemigos[3].HP > 0) {
-      enemigos[3].HP = enemigos[3].HP - (daño * 200) / 100;
-      enemigos[4].HP = enemigos[4].HP - (daño * 200) / 100;
-      enemigos[5].HP = enemigos[5].HP - (daño * 200) / 100;
-    } else if (enemigos[4].HP > 0) {
-      enemigos[4].HP = enemigos[4].HP - (daño * 200) / 100;
-      enemigos[5].HP = enemigos[5].HP - (daño * 200) / 100;
-    } else if (enemigos[5].HP > 0) {
-      enemigos[5].HP = enemigos[5].HP - (daño * 200) / 100;
+    if (enemigos[0].HP > 0) {
+      enemigos[0].HP = enemigos[0].HP - (daño * 200) / 100;
+      enemigos[1].HP = enemigos[1].HP - (daño * 200) / 100;
+      enemigos[2].HP = enemigos[2].HP - (daño * 200) / 100;
+    } else if (enemigos[1].HP > 0) {
+      enemigos[1].HP = enemigos[1].HP - (daño * 200) / 100;
+      enemigos[2].HP = enemigos[2].HP - (daño * 200) / 100;
+    } else if (enemigos[2].HP > 0) {
+      enemigos[2].HP = enemigos[2].HP - (daño * 200) / 100;
     }
     return (enemigos);
 
@@ -215,48 +216,49 @@ export function empalarIII() {
 export function lanza_carbonI() {
   if (estamina >= 5 && cooldowns[1] <= 1 && turnoActual == 'jugador') {
     cooldowns[1] = 0;
-    if (enemigos[3].HP > 0) {
-      enemigos[3].HP = enemigos[3].HP - (daño * 100) / 100;
-      enemigos[4].HP = enemigos[4].HP - daño * 0;
-      enemigos[5].HP = enemigos[5].HP - daño * 0;
-    } else if (enemigos[5].HP > 0) {
-      enemigos[4].HP = enemigos[4].HP - (daño * 100) / 100;
-      enemigos[5].HP = enemigos[5].HP - daño * 0;
+    if (enemigos[0].HP > 0) {
+      enemigos[0].HP = enemigos[0].HP - (daño * 100) / 100;
+      enemigos[1].HP = enemigos[1].HP - daño * 0;
+      enemigos[2].HP = enemigos[2].HP - daño * 0;
+    } else if (enemigos[2].HP > 0) {
+      enemigos[1].HP = enemigos[1].HP - (daño * 100) / 100;
+      enemigos[2].HP = enemigos[2].HP - daño * 0;
     } else if (enemigo[3].HP > 0) {
-      enemigos[5].HP = enemigos[5].HP - (daño * 100) / 100;
+      enemigos[2].HP = enemigos[2].HP - (daño * 100) / 100;
     }
     return (enemigos);
   } else console.log("¡estamina insuficiente!");
 }
 export function lanza_carbonII() {
+  cooldowns[1] = 0;
   if (estamina >= 7 && cooldowns[1] <= 1 && turnoActual == 'jugador') {
     cooldowns[1] = 0;
-    if (enemigos[3].HP > 0) {
-      enemigos[3].HP = enemigos[3].HP - (daño * 125) / 100;
-      enemigos[4].HP = enemigos[4].HP - daño * 0;
-      enemigos[5].HP = enemigos[5].HP - daño * 0;
-    } else if (enemigos[5].HP > 0) {
-      enemigos[4].HP = enemigos[4].HP - (daño * 125) / 100;
-      enemigos[5].HP = enemigos[5].HP - daño * 0;
+    if (enemigos[0].HP > 0) {
+      enemigos[0].HP = enemigos[0].HP - (daño * 125) / 100;
+      enemigos[1].HP = enemigos[1].HP - daño * 0;
+      enemigos[2].HP = enemigos[2].HP - daño * 0;
+    } else if (enemigos[2].HP > 0) {
+      enemigos[1].HP = enemigos[1].HP - (daño * 125) / 100;
+      enemigos[2].HP = enemigos[2].HP - daño * 0;
     } else if (enemigo[3].HP > 0) {
-      enemigos[5].HP = enemigos[5].HP - (daño * 125) / 100;
+      enemigos[2].HP = enemigos[2].HP - (daño * 125) / 100;
     }
     return (enemigos);
   } else console.log("¡estamina insuficiente!");
 }
 export function lanza_carbonIII() {
-
+  cooldowns[1] = 0;
   if (estamina >= 10 && cooldowns[1] <= 1 && turnoActual == 'jugador') {
     cooldowns[1] = 0;
-    if (enemigos[3].HP > 0) {
-      enemigos[3].HP = enemigos[3].HP - (daño * 150) / 100;
-      enemigos[4].HP = enemigos[4].HP - daño * 0;
-      enemigos[5].HP = enemigos[5].HP - daño * 0;
-    } else if (enemigos[4].HP > 0) {
-      enemigos[4].HP = enemigos[4].HP - (daño * 150) / 100;
-      enemigos[5].HP = enemigos[5].HP - daño * 0;
-    } else if (enemigo[5].HP > 0) {
-      enemigos[5].HP = enemigos[5].HP - (daño * 150) / 100;
+    if (enemigos[0].HP > 0) {
+      enemigos[0].HP = enemigos[0].HP - (daño * 150) / 100;
+      enemigos[1].HP = enemigos[1].HP - daño * 0;
+      enemigos[2].HP = enemigos[2].HP - daño * 0;
+    } else if (enemigos[1].HP > 0) {
+      enemigos[1].HP = enemigos[1].HP - (daño * 150) / 100;
+      enemigos[2].HP = enemigos[2].HP - daño * 0;
+    } else if (enemigo[2].HP > 0) {
+      enemigos[2].HP = enemigos[2].HP - (daño * 150) / 100;
     }
     return (enemigos);
   } else console.log("¡estamina insuficiente!");
@@ -265,19 +267,19 @@ export function lanza_carbon_llamasI() {
   if (estamina >= 20 && cooldowns[2] <= 4 && turnoActual == 'jugador') {
     cooldowns[2] = 0;
  
-    if (enemigos[3].HP > 0) {
-      enemigos[3].HP = enemigos[3].HP - (daño * 160) / 100;
-      enemigos[4].HP = enemigos[4].HP - daño * 0;
-      enemigos[5].HP = enemigos[5].HP - daño * 0;
-      enemigos[3].fuego == true;
-    } else if (enemigos[4].HP > 0) {
-      enemigos[4].HP = enemigos[4].HP - (daño * 160) / 100;
-      enemigos[5].HP = enemigos[5].HP - daño * 0;
-      enemigos[4].fuego == true;
+    if (enemigos[0].HP > 0) {
+      enemigos[0].HP = enemigos[0].HP - (daño * 160) / 100;
+      enemigos[1].HP = enemigos[1].HP - daño * 0;
+      enemigos[2].HP = enemigos[2].HP - daño * 0;
+      enemigos[0].fuego == true;
+    } else if (enemigos[1].HP > 0) {
+      enemigos[1].HP = enemigos[1].HP - (daño * 160) / 100;
+      enemigos[2].HP = enemigos[2].HP - daño * 0;
+      enemigos[1].fuego == true;
 
-    } else if (enemigo[5].HP > 0) {
-      enemigos[5].HP = enemigos[5].HP - (daño * 160) / 100;
-      enemigos[5].fuego == true;
+    } else if (enemigo[2].HP > 0) {
+      enemigos[2].HP = enemigos[2].HP - (daño * 160) / 100;
+      enemigos[2].fuego == true;
 
     }
     return (enemigos);
@@ -286,19 +288,19 @@ export function lanza_carbon_llamasI() {
 export function lanza_carbon_llamasII() {
   if (estamina >= 25 && cooldowns[2] <= 4 && turnoActual == 'jugador') {
     cooldowns[2] = 0;
-    if (enemigos[3].HP > 0) {
-      enemigos[3].HP = enemigos[3].HP - (daño * 190) / 100;
-      enemigos[4].HP = enemigos[4].HP - daño * 0;
-      enemigos[5].HP = enemigos[5].HP - daño * 0;
-      enemigos[3].fuego == true;
-    } else if (enemigos[4].HP > 0) {
-      enemigos[4].HP = enemigos[4].HP - (daño * 190) / 100;
-      enemigos[5].HP = enemigos[5].HP - daño * 0;
-      enemigos[4].fuego == true;
+    if (enemigos[0].HP > 0) {
+      enemigos[0].HP = enemigos[0].HP - (daño * 190) / 100;
+      enemigos[1].HP = enemigos[1].HP - daño * 0;
+      enemigos[2].HP = enemigos[2].HP - daño * 0;
+      enemigos[0].fuego == true;
+    } else if (enemigos[1].HP > 0) {
+      enemigos[1].HP = enemigos[1].HP - (daño * 190) / 100;
+      enemigos[2].HP = enemigos[2].HP - daño * 0;
+      enemigos[1].fuego == true;
 
-    } else if (enemigo[5].HP > 0) {
-      enemigos[5].HP = enemigos[5].HP - (daño * 190) / 100;
-      enemigos[5].fuego == true;
+    } else if (enemigo[2].HP > 0) {
+      enemigos[2].HP = enemigos[2].HP - (daño * 190) / 100;
+      enemigos[2].fuego == true;
 
     }
     return (enemigos);
@@ -307,19 +309,19 @@ export function lanza_carbon_llamasII() {
 export function lanza_carbon_llamasIII() {
   if (estamina >= 30 && cooldowns[2] <= 4 && turnoActual == 'jugador') {
     cooldowns[2] = 0;
-    if (enemigos[3].HP > 0) {
-      enemigos[3].HP = enemigos[3].HP - (daño * 220) / 100;
-      enemigos[4].HP = enemigos[4].HP - daño * 0;
-      enemigos[5].HP = enemigos[5].HP - daño * 0;
-      enemigos[3].fuego == true;
-    } else if (enemigos[4].HP > 0) {
-      enemigos[4].HP = enemigos[4].HP - (daño * 220) / 100;
-      enemigos[5].HP = enemigos[5].HP - daño * 0;
-      enemigos[4].fuego == true;
+    if (enemigos[0].HP > 0) {
+      enemigos[0].HP = enemigos[0].HP - (daño * 220) / 100;
+      enemigos[1].HP = enemigos[1].HP - daño * 0;
+      enemigos[2].HP = enemigos[2].HP - daño * 0;
+      enemigos[0].fuego == true;
+    } else if (enemigos[1].HP > 0) {
+      enemigos[1].HP = enemigos[1].HP - (daño * 220) / 100;
+      enemigos[2].HP = enemigos[2].HP - daño * 0;
+      enemigos[1].fuego == true;
 
-    } else if (enemigo[5].HP > 0) {
-      enemigos[5].HP = enemigos[5].HP - (daño * 220) / 100;
-      enemigos[5].fuego == true;
+    } else if (enemigo[2].HP > 0) {
+      enemigos[2].HP = enemigos[2].HP - (daño * 220) / 100;
+      enemigos[2].fuego == true;
 
     }
     return (enemigos);
@@ -328,15 +330,15 @@ export function lanza_carbon_llamasIII() {
 export function cuchillo_venenosoI() {
   if (estamina >= 25 && cooldowns[3] <= 5 && turnoActual == 'jugador') {
     cooldowns[3] = 0;
-    if (enemigos[3].HP > 0) {
-      enemigos[3].HP = enemigos[3].HP - (daño * 140) / 100;
-      enemigos[4].HP = enemigos[4].HP - daño * 0;
-      enemigos[5].HP = enemigos[5].HP - daño * 0;
-    } else if (enemigos[5].HP > 0) {
-      enemigos[4].HP = enemigos[4].HP - (daño * 140) / 100;
-      enemigos[5].HP = enemigos[5].HP - daño * 0;
+    if (enemigos[0].HP > 0) {
+      enemigos[0].HP = enemigos[0].HP - (daño * 140) / 100;
+      enemigos[1].HP = enemigos[1].HP - daño * 0;
+      enemigos[2].HP = enemigos[2].HP - daño * 0;
+    } else if (enemigos[2].HP > 0) {
+      enemigos[1].HP = enemigos[1].HP - (daño * 140) / 100;
+      enemigos[2].HP = enemigos[2].HP - daño * 0;
     } else if (enemigo[3].HP > 0) {
-      enemigos[5].HP = enemigos[5].HP - (daño * 140) / 100;
+      enemigos[2].HP = enemigos[2].HP - (daño * 140) / 100;
     }
     return (enemigos);
 
@@ -345,15 +347,15 @@ export function cuchillo_venenosoI() {
 export function cuchillo_venenosoII() {
   if (estamina >= 30 && cooldowns[3] <= 5 && turnoActual == 'jugador') {
     cooldowns[3] = 0;
-    if (enemigos[3].HP > 0) {
-      enemigos[3].HP = enemigos[3].HP - (daño * 140) / 100;
-      enemigos[4].HP = enemigos[4].HP - daño * 0;
-      enemigos[5].HP = enemigos[5].HP - daño * 0;
-    } else if (enemigos[5].HP > 0) {
-      enemigos[4].HP = enemigos[4].HP - (daño * 140) / 100;
-      enemigos[5].HP = enemigos[5].HP - daño * 0;
+    if (enemigos[0].HP > 0) {
+      enemigos[0].HP = enemigos[0].HP - (daño * 140) / 100;
+      enemigos[1].HP = enemigos[1].HP - daño * 0;
+      enemigos[2].HP = enemigos[2].HP - daño * 0;
+    } else if (enemigos[2].HP > 0) {
+      enemigos[1].HP = enemigos[1].HP - (daño * 140) / 100;
+      enemigos[2].HP = enemigos[2].HP - daño * 0;
     } else if (enemigo[3].HP > 0) {
-      enemigos[5].HP = enemigos[5].HP - (daño * 140) / 100;
+      enemigos[2].HP = enemigos[2].HP - (daño * 140) / 100;
     }
     return (enemigos);
   } else console.log("¡estamina insuficiente!");
@@ -571,74 +573,74 @@ export function dañoMonstruo() {
     var element = enemigos[i];
     vidaM = vidaM - element.ATK;
     } ;
-      if (enemigos[3].habilityI.name== "vampirismo") {
+      if (enemigos[0].habilityI.name== "vampirismo") {
       let vampnum = Math.random();
-      if (vampnum <= enemigos[3].habilityI.valor) {
-          enemigos[3].HP = enemigos[3].HP + 5;
+      if (vampnum <= enemigos[0].habilityI.valor) {
+          enemigos[0].HP = enemigos[0].HP + 5;
       } 
     }
-    if (enemigos[4].habilityI.name== "vampirismo") {
+    if (enemigos[1].habilityI.name== "vampirismo") {
       let vampnum = Math.random();
-      if (vampnum <= enemigos[4].habilityI.valor) {
-          enemigos[4].HP = enemigos[4].HP + 5;
+      if (vampnum <= enemigos[1].habilityI.valor) {
+          enemigos[1].HP = enemigos[1].HP + 5;
     } 
 }
-    if (enemigos[5].habilityI.name== "vampirismo") {
+    if (enemigos[2].habilityI.name== "vampirismo") {
       let vampnum = Math.random();
-      if (vampnum <= enemigos[4].habilityI.valor) {
-        enemigos[5].HP = enemigos[5].HP + 5;
+      if (vampnum <= enemigos[1].habilityI.valor) {
+        enemigos[2].HP = enemigos[2].HP + 5;
     }    
 }
-    if (enemigos[3].habilityII.name== "quemadura") {
+    if (enemigos[0].habilityII.name== "quemadura") {
       let quenum = Math.random();
-      if (quenum <= enemigos[3].habilityII.valor) {
-        enemigos[3].HP = enemigos[3].HP + 5;
+      if (quenum <= enemigos[0].habilityII.valor) {
+        enemigos[0].HP = enemigos[0].HP + 5;
     }
   }
-    if (enemigos[4].habilityII.name== "quemadura") {
+    if (enemigos[1].habilityII.name== "quemadura") {
     let quenum = Math.random();
-    if (quenum <= enemigos[4].habilityII.valor) {
-      enemigos[4].HP = enemigos[4].HP + 5;
+    if (quenum <= enemigos[1].habilityII.valor) {
+      enemigos[1].HP = enemigos[1].HP + 5;
   }
 }
-    if (enemigos[5].habilityII.name== "quemadura") {
+    if (enemigos[2].habilityII.name== "quemadura") {
   let quenum = Math.random();
-  if (quenum <= enemigos[5].habilityII.valor) {
-    enemigos[5].HP = enemigos[5].HP + 5;
+  if (quenum <= enemigos[2].habilityII.valor) {
+    enemigos[2].HP = enemigos[2].HP + 5;
     }
   }
-    if(enemigos[3].habilityII.name == "lentitud") {
+    if(enemigos[0].habilityII.name == "lentitud") {
       let lennum = Math.random() ;
-      if (lennum <= enemigos[3].habilityII.valor) {
+      if (lennum <= enemigos[0].habilityII.valor) {
       lentitudF();
       }
   }
-  if(enemigos[4].habilityII.name == "lentitud") {
+  if(enemigos[1].habilityII.name == "lentitud") {
     let lennum = Math.random() ;
-    if (lennum <= enemigos[4].habilityII.valor) {
+    if (lennum <= enemigos[1].habilityII.valor) {
     lentitudF();
     }
 }
-if(enemigos[5].habilityII.name == "lentitud") {
+if(enemigos[2].habilityII.name == "lentitud") {
   let lennum = Math.random() ;
-  if (lennum <= enemigos[5].habilityII.valor) {
+  if (lennum <= enemigos[2].habilityII.valor) {
   lentitudF();
   }
 }
-if(enemigos[3].habilityIII.name == "veneno") {
+if(enemigos[0].habilityIII.name == "veneno") {
   let vennum = Math.random() ;
-  if (vennum <= enemigos[3].habilityII.valor) {
+  if (vennum <= enemigos[0].habilityII.valor) {
   vidaM = vidaM -5;
   }
-  if(enemigos[4].habilityIII.name == "veneno") {
+  if(enemigos[1].habilityIII.name == "veneno") {
     let vennum = Math.random() ;
-    if (vennum <= enemigos[4].habilityII.valor) {
+    if (vennum <= enemigos[1].habilityII.valor) {
     vidaM = vidaM -5;
     }
 }
-if(enemigos[5].habilityIII.name == "veneno") {
+if(enemigos[2].habilityIII.name == "veneno") {
   let vennum = Math.random() ;
-  if (vennum <= enemigos[5].habilityII.valor) {
+  if (vennum <= enemigos[2].habilityII.valor) {
   vidaM = vidaM -5;
   }
   turnoActual === "jugador";
