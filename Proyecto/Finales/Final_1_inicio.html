@@ -18,9 +18,7 @@
             <img src="../Imagenes/Logo.png" />
         </div>
         <div class="botones_inicio">
-            <a href="Final_3_partida.html">
             <button type="button" class="botonjugar" id="jugar">Jugar</button>
-            </a>
             <a href="Final_2_cristales.html">
                 <button type="button" class="botoncristales">Cristales</button>
             </a>
@@ -33,17 +31,16 @@
         <script src="soquet.js"></script>
 
         <script>
-            alert("para funcionar el juego debe estar en pantalla completa");
-            const $jugar = document.getElementById("jugar");
-            $jugar.addEventListener("click", () => {
-                postData("pedirEnemigos", null, (enemigos) => {
+            const $jugar = document.getElementById("jugar"); // El enlace, no el botón
+            $jugar.addEventListener("click", (event) => {
+                event.preventDefault(); // Evita que el enlace redirija inmediatamente
+                console.log("pressed");
+                fetchData("pedirEnemigos", (enemigos) => {
                     console.log("enemigos: ", enemigos);
                     localStorage.setItem("enemigos", JSON.stringify(enemigos));
-                    window.location.href = "Final_3_partida.html";
+                    window.location.href = "Final_3_partida.html"; // Redirige manualmente después de terminar
                 });
             });
         </script>
-
-
     </body>
 </html>

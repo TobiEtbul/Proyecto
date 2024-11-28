@@ -38,8 +38,8 @@ $golpear.addEventListener("click", () => {
     fetchData("golpear", (enemigos) => {
         ene = enemigos;
         console.log(ene);
-        acutalizarBarra(ene[0], barras[0]);
-        acutalizarBarra(ene[1], barras[1]);
-        acutalizarBarra(ene[2], barras[2]);
+        acutalizarBarra(ene[3], barras[0]);
+        acutalizarBarra(ene[4], barras[1]);
+        acutalizarBarra(ene[5], barras[2]);
     });
 });
