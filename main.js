@@ -50,9 +50,6 @@ export function generarEnemigoAleatorioZ3() {
   enemigos.push(enemigo);
   return enemigo;
 }
-for (let j = 0; j < 3; j++) {
-  generarEnemigoAleatorioZ1();
-}
 
 console.log(enemigos[0].HP);
 console.log(enemigos[1].HP);
