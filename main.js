@@ -24,31 +24,31 @@ var enemigos = [];
 
 export function generarEnemigoAleatorioZ1() {
   for (let i = 0; i < enemigos.length; i++) {
-    enemigos.pop    
+    enemigos.pop()   
   }
   var i = Math.floor(Math.random() * enemigosZ1.length);
   var enemigo = enemigosZ1[i];
   enemigos.push(enemigo);
   console.log(enemigos);
-  return enemigo;
+  return enemigos;
 }
 export function generarEnemigoAleatorioZ2() {
   for (let i = 0; i < enemigos.length; i++) {
-    enemigos.pop    
+    enemigos.pop()
   }
   var i = Math.floor(Math.random() * enemigosZ2.length);
   var enemigo = enemigosZ2[i];
   enemigos.push(enemigo);
-  return enemigo;
+  return enemigos;
 }
 export function generarEnemigoAleatorioZ3() {
   for (let i = 0; i < enemigos.length; i++) {
-    enemigos.pop    
+    enemigos.pop() 
   }
   var i = Math.floor(Math.random() * enemigosZ3.length);
   var enemigo = enemigosZ3[i];
   enemigos.push(enemigo);
-  return enemigo;
+  return enemigos;
 }
 for (let j = 0; j < 3; j++) {
   generarEnemigoAleatorioZ1();
