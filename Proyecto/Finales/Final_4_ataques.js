@@ -33,7 +33,7 @@ function acutalizarBarra(i, enemigo, barra, contenedor) {
     barra.style.width = porcentajeVida + "%";
     if (enemigo.HP <= 0) {
         console.log(`El enemigo ${enemigo.name} ha sido derrotado.`);
-        document.getElementById("cont_ene"+i).hidden = true;
+        document.getElementById("enemigo"+i).hidden = true;
     }
 }
 
