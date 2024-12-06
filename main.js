@@ -23,14 +23,12 @@ let habilidades = habilidades_act.concat(habilidades_pas);
 var enemigos = [];
 
 export function generarEnemigoAleatorioZ1() {
-  for (let i = 0; i < enemigos.length; i++) {
-    enemigos.pop()   
-  }
   var i = Math.floor(Math.random() * enemigosZ1.length);
   var enemigo = enemigosZ1[i];
   enemigos.push(enemigo);
   console.log(enemigos);
-  return enemigo;
+return enemigo;
+
 }
 export function generarEnemigoAleatorioZ2() {
   for (let i = 0; i < enemigos.length; i++) {
@@ -50,10 +48,16 @@ export function generarEnemigoAleatorioZ3() {
   enemigos.push(enemigo);
   return enemigo;
 }
+for (let i = 0; i < 3; i++) {
+  generarEnemigoAleatorioZ1
+  
+}
 
-console.log(enemigos[0].HP);
-console.log(enemigos[1].HP);
-console.log(enemigos[2].HP);
+console.log(enemigos[0]);
+console.log(enemigos[1]);
+console.log(enemigos[2]);
+
+
 
 let turnoActual = "jugador"; // Inicia el turno el jugador
 let cooldowns = {
