@@ -37,6 +37,15 @@ function acutalizarBarra(i, enemigo, barra, contenedor) {
     }
 }
 
+function ataqueene (barra,enemigo1,enemigo2, enemigo3, minero, $enemigos ){
+    ATKE = enemigos.enemigo1.ATK + enemigos.enemigo2.ATK + enemigos.enemigo3.ATK
+    console.log(ATKE)
+    minero.HP = minero.HP - ATKE ;
+    console.log (minero.HP)
+    let porcentajeVidaM = (minero.HP * 100) / minero.HPM;
+    barra.style.width = porcentajeVidaM + "%";
+}
+
 
 const barras = [
     document.getElementById("vidaEnemigo1"),
@@ -53,5 +62,6 @@ $golpear.addEventListener("click", () => {
         acutalizarBarra(1, ene[0], barras[0]);
         acutalizarBarra(2, ene[1], barras[1]);
         acutalizarBarra(3, ene[2], barras[2]);
+        ataqueene();
     });
 });
