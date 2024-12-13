@@ -1,4 +1,4 @@
-const $enemigos = [
+const $enemigos = [ 
     document.getElementById("enemigo1"),
     document.getElementById("enemigo2"),
     document.getElementById("enemigo3"),
@@ -9,6 +9,7 @@ const contenedores = [
     document.querySelector(".cont_ene3"),
 ];
 const enemigos = JSON.parse(localStorage.getItem("enemigos"));
+// let enemigos;
 
 $enemigos[0].src =
     "http://localhost:5500/Proyecto/Imagenes/Enemigos/" +
@@ -35,15 +36,28 @@ function acutalizarBarra(i, enemigo, barra, contenedor) {
         console.log(`El enemigo ${enemigo.name} ha sido derrotado.`);
         document.getElementById("enemigo"+i).hidden = true;
     }
+    if( enemigo1 <= 0 & enemigo2 <= 0 & enemigo3 <= 0 ) {
+        window.location.href = 'http://127.0.0.1:5500/Proyecto/Finales/Creditos.html';
+    }
 }
+let vidaM = 150;
+const dataM = JSON.parse(localStorage.getItem("dataM"));
+const vidaMT = 150;
+let barraM = document.getElementById("vidaMinero"); 
 
-function ataqueene (barra,enemigo1,enemigo2, enemigo3, minero, $enemigos ){
+
+function ataqueene (){
+    console.log(vidaM);
     ATKE = enemigos.enemigo1.ATK + enemigos.enemigo2.ATK + enemigos.enemigo3.ATK
     console.log(ATKE)
-    minero.HP = minero.HP - ATKE ;
-    console.log (minero.HP)
-    let porcentajeVidaM = (minero.HP * 100) / minero.HPM;
-    barra.style.width = porcentajeVidaM + "%";
+    vidaM = vidaM - ATKE ;
+    let porcentajeVidaM = (vidaM * 100) / vidaMT;
+    barraM.style.width = porcentajeVidaM + "%";
+    console.log(porcentajeVidaM);
+    if(vidaM <= 0) {
+        document.getElementById("cosasM").hidden = true;
+        window.location.href = 'http://127.0.0.1:5500/Proyecto/Finales/Perdiste.html';
+    }
 }
 
 

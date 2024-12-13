@@ -12,7 +12,8 @@ let dataM = JSON.parse(fs.readFileSync("./JSON/negro.json"));
 
 var daño = dataM.ATK;
 var areaDMG = dataM.areaATK;
-var vidaM = dataM.HPM;
+var vidaM = dataM.HPM ;
+var vidaMT = dataM.HPM;
 var estamina = dataM.estamina;
 var inmunidad = dataM.inmunidad;
 var fuego = dataM.fuego;
